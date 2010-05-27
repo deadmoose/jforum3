@@ -43,13 +43,13 @@ public class PostService {
 	}
 
 	/**
-	 * Required by CGLib. Use {@link #PostService(PostRepository)} instead
+	 * Required by CGLib. Use {@link #PostService(PostRepository, AttachmentService, PollService, TopicRepository, ModerationLogService)} instead
 	 */
 	public PostService() { }
 
 	/**
 	 * Deletes an existing post
-	 * @param postId
+	 * @param post
 	 */
 	public void delete(Post post) {
 		this.attachmentService.deleteAllAttachments(post);

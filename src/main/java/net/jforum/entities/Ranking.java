@@ -126,9 +126,6 @@ public class Ranking implements Serializable {
 		this.min = i;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -142,17 +139,11 @@ public class Ranking implements Serializable {
 		return ((Ranking) o).getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return this.getTitle();

@@ -22,7 +22,7 @@ public interface PrivateMessageRepository extends Repository<PrivateMessage> {
 	/**
 	 * Selects all messages from the user's inbox.
 	 *
-	 * @param the user who received the messages
+	 * @param user the user who received the messages
 	 * @return al messages
 	 */
 	public List<PrivateMessage> getFromInbox(User user);

@@ -48,7 +48,7 @@ public class TopicService {
 
 	/**
 	 * Required by CGLib.
-	 * Use {@link #TopicService(TopicRepository, PostRepository, ForumRepository)} instead
+	 * Use {@link #TopicService(TopicRepository, PostRepository, ForumRepository, AttachmentService, PollService, UserRepository)} instead
 	 */
 	public TopicService() { }
 

@@ -20,7 +20,7 @@ public class SpringInterceptor extends EmptyInterceptor {
 	}
 
 	/**
-	 * @see org.hibernate.EmptyInterceptor#instantiate(java.lang.String, org.hibernate.EntityMode, java.io.Serializable)
+	 * @see org.hibernate.EmptyInterceptor#instantiate(String, org.hibernate.EntityMode, java.io.Serializable)
 	 */
 	@Override
 	public Object instantiate(String entityName, EntityMode entityMode, Serializable id) {

@@ -41,7 +41,7 @@ public class HibernateGenericDAO<T> implements Repository<T> {
 
 	/**
 	 *
-	 * @see net.jforum.repository.Repository#remove(java.lang.Object)
+	 * @see net.jforum.repository.Repository#remove(Object)
 	 */
 	public void remove(T entity) {
 		this.session().delete(entity);
@@ -56,14 +56,14 @@ public class HibernateGenericDAO<T> implements Repository<T> {
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#add(java.lang.Object)
+	 * @see net.jforum.repository.Repository#add(Object)
 	 */
 	public void add(T entity) {
 		this.session().save(entity);
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#update(java.lang.Object)
+	 * @see net.jforum.repository.Repository#update(Object)
 	 */
 	public void update(T entity) {
 		this.session().update(entity);

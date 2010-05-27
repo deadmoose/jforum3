@@ -31,7 +31,7 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#findByUserName(java.lang.String)
+	 * @see net.jforum.repository.UserRepository#findByUserName(String)
 	 */
 	public List<User> findByUserName(String username) {
 		return null;
@@ -45,7 +45,7 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#getByUsername(java.lang.String)
+	 * @see net.jforum.repository.UserRepository#getByUsername(String)
 	 */
 	public User getByUsername(String username) {
 		return null;
@@ -80,14 +80,14 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#validateLogin(java.lang.String, java.lang.String)
+	 * @see net.jforum.repository.UserRepository#validateLogin(String, String)
 	 */
 	public User validateLogin(String username, String password) {
 		return null;
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#add(java.lang.Object)
+	 * @see net.jforum.repository.Repository#add(Object)
 	 */
 	@Override
 	public void add(User entity) {
@@ -102,14 +102,14 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#remove(java.lang.Object)
+	 * @see net.jforum.repository.Repository#remove(Object)
 	 */
 	@Override
 	public void remove(User entity) {
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#update(java.lang.Object)
+	 * @see net.jforum.repository.Repository#update(Object)
 	 */
 	@Override
 	public void update(User entity) {
@@ -123,21 +123,21 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#isUsernameAvailable(java.lang.String, java.lang.String)
+	 * @see net.jforum.repository.UserRepository#isUsernameAvailable(String, String)
 	 */
 	public boolean isUsernameAvailable(String username, String email) {
 		return false;
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#getByEmail(java.lang.String)
+	 * @see net.jforum.repository.UserRepository#getByEmail(String)
 	 */
 	public User getByEmail(String email) {
 		return null;
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#validateLostPasswordHash(java.lang.String, java.lang.String)
+	 * @see net.jforum.repository.UserRepository#validateLostPasswordHash(String, String)
 	 */
 	public User validateLostPasswordHash(String username, String hash) {
 		return null;
@@ -151,7 +151,7 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#findByUserName(java.lang.String, java.util.List)
+	 * @see net.jforum.repository.UserRepository#findByUserName(String, java.util.List)
 	 */
 	public List<User> findByUserName(String username, List<Group> filterGroups) {
 		return null;

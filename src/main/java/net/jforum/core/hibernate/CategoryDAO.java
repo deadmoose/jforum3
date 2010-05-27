@@ -44,7 +44,7 @@ public class CategoryDAO extends HibernateGenericDAO<Category> implements Catego
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(Object)
 	 */
 	@Override
 	public void add(Category entity) {

@@ -168,17 +168,11 @@ public class Banlist implements Serializable {
 		return values;
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -192,9 +186,6 @@ public class Banlist implements Serializable {
 		return ((Banlist)o).getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return new StringBuilder()

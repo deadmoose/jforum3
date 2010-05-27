@@ -26,7 +26,6 @@ public class MD5 {
 	 *
 	 * @param str String to encode
 	 * @return Encoded String
-	 * @throws NoSuchAlgorithmException
 	 */
 	public static String hash(String str) {
 		if (str == null || str.length() == 0) {

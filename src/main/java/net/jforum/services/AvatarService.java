@@ -55,7 +55,7 @@ public class AvatarService {
 	 * Adds a new avatar
 	 *
 	 * @param avatar
-	 * @param image
+	 * @param uploadedFile
 	 */
 	public void add(Avatar avatar, UploadedFileInformation uploadedFile) {
 		if (uploadedFile == null) {
@@ -96,7 +96,7 @@ public class AvatarService {
 	 * Updates a existing avatar
 	 *
 	 * @param avatar
-	 * @param image
+	 * @param uploadedFile
 	 */
 	public void update(Avatar avatar, UploadedFileInformation uploadedFile) {
 		this.isAllowed(avatar);

@@ -36,7 +36,8 @@ public interface ForumRepository extends Repository<Forum> {
 	/**
 	 * Get the topics from a given forum
 	 * @param forum
-	 * @param intValue
+	 * @param start
+	 * @param count
 	 * @return
 	 */
 	public List<Topic> getTopics(Forum forum, int start, int count);
@@ -54,7 +55,7 @@ public interface ForumRepository extends Repository<Forum> {
 
 	/**
 	 * Gets the last post of a given forum
-	 * @param topic the forum to check
+	 * @param forum the forum to check
 	 * @return the post instance
 	 */
 	public Post getLastPost(Forum forum);
@@ -74,14 +75,14 @@ public interface ForumRepository extends Repository<Forum> {
 	public int getTotalTopics(Forum forum);
 
 	/**
-	 * @param date
+	 * @param from
 	 * @param start
 	 * @param recordsPerPage
 	 */
 	public PaginatedResult<Topic> getNewMessages(Date from, int start, int recordsPerPage);
 
 	/**
-	 * @param forum
+	 * @param toForum
 	 * @param topicIds
 	 */
 	public void moveTopics(Forum toForum, int... topicIds);

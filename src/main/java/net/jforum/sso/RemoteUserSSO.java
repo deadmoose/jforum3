@@ -25,8 +25,9 @@ public class RemoteUserSSO implements SSO {
 	private JForumConfig config;
 
 	/**
-	 * @see net.jforum.sso.SSO#authenticateUser(net.jforum.context.RequestContext)
-	 * @param request AWebContextRequest * @return String
+	 * @see net.jforum.sso.SSO#authenticateUser(HttpServletRequest)
+	 * @param request AWebContextRequest
+	 * @return String
 	 */
 	public String authenticateUser(HttpServletRequest request) {
 		return request.getRemoteUser();

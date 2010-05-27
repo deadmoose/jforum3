@@ -57,7 +57,7 @@ public class EmailSenderTask implements Runnable {
 	}
 
 	/**
-	 * @see java.lang.Runnable#run()
+	 * @see Runnable#run()
 	 */
 	public void run() {
 		if (logger.isTraceEnabled()) {

@@ -64,7 +64,7 @@ public class AvatarDAO extends HibernateGenericDAO<Avatar> implements AvatarRepo
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#remove(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#remove(Object)
 	 */
 	@Override
 	public void remove(Avatar avatar) {

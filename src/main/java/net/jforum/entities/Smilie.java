@@ -84,17 +84,11 @@ public class Smilie implements Serializable {
 		return this.diskName;
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -108,9 +102,6 @@ public class Smilie implements Serializable {
 		return ((Smilie)o).getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "[smilie=" + this.getCode() + ", id=" + this.getId() + "]";

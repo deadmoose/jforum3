@@ -108,7 +108,7 @@ public class CategoryAdminActionsTestCase extends AdminTestCase {
 	}
 
 	/**
-	 * Test method for {@link net.jforum.actions.CategoryAdminActions#up(java.lang.Integer)}.
+	 * Test method for {@link net.jforum.actions.CategoryAdminActions#up(int)}.
 	 */
 	@Test
 	public void up() {
@@ -122,7 +122,7 @@ public class CategoryAdminActionsTestCase extends AdminTestCase {
 	}
 
 	/**
-	 * Test method for {@link net.jforum.actions.CategoryAdminActions#down(java.lang.Integer)}.
+	 * Test method for {@link net.jforum.actions.CategoryAdminActions#down(int)}.
 	 */
 	@Test
 	public void down() {

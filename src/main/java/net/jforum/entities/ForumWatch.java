@@ -85,9 +85,6 @@ public class ForumWatch implements Serializable {
 		this.id = id;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -103,9 +100,6 @@ public class ForumWatch implements Serializable {
 			&& fw.getUserId() == this.getUserId();
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return new StringBuffer()

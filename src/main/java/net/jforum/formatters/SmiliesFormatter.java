@@ -30,7 +30,7 @@ public class SmiliesFormatter implements Formatter {
 	}
 
 	/**
-	 * @see net.jforum.formatters.Formatter#format(java.lang.String, net.jforum.formatters.PostOptions)
+	 * @see net.jforum.formatters.Formatter#format(String, net.jforum.formatters.PostOptions)
 	 */
 	public String format(String text, PostOptions postOptions) {
 		if (postOptions.isSmiliesEnabled()) {

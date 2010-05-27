@@ -47,7 +47,7 @@ public class QueryCache extends StandardQueryCache {
 	}
 
 	/**
-	 * @see org.hibernate.cache.StandardQueryCache#isUpToDate(java.util.Set, java.lang.Long)
+	 * @see org.hibernate.cache.StandardQueryCache#isUpToDate(Set, Long)
 	 */
 	@Override
 	@SuppressWarnings("unchecked")

@@ -132,17 +132,11 @@ public class Category implements Serializable {
 		return this.repository.getForums(this);
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -156,9 +150,6 @@ public class Category implements Serializable {
 		return ((Category)o).getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return new StringBuilder(64)

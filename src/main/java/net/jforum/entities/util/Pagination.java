@@ -42,7 +42,9 @@ public class Pagination {
 	/**
 	 * @param totalRecords the total number of records
 	 * @param recordsPerPage how many records show per page
-	 * @param start the number of the first record to start showing
+	 * @param page the number of the first record to start showing
+	 * @param baseUrl
+	 * @param id
 	 */
 	public Pagination(long totalRecords, int recordsPerPage, int page, String baseUrl, int id) {
 		this.recordsPerPage = recordsPerPage;
@@ -73,7 +75,7 @@ public class Pagination {
 
 	/**
 	 * Create pagination for user listing
-	 * @param totalUsers the total of users
+	 * @param totalRecords
 	 * @return the pagination instance
 	 */
 	public Pagination forModerationLog(int totalRecords) {

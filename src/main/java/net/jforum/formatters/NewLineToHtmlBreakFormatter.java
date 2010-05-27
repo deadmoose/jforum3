@@ -18,7 +18,7 @@ import org.apache.commons.lang.StringUtils;
  */
 public class NewLineToHtmlBreakFormatter implements Formatter {
 	/**
-	 * @see net.jforum.formatters.Formatter#format(java.lang.String, PostOptions)
+	 * @see net.jforum.formatters.Formatter#format(String, PostOptions)
 	 */
 	public String format(String text, PostOptions postOptions) {
 		return StringUtils.replace(text, "\n", "<br/> ");

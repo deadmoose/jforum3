@@ -36,7 +36,7 @@ public class DefaultViewLocator implements ViewLocator {
 	private final String SUPPORTEDJSON  = "AJAX";
 
 	/**
-	 * @see org.vraptor.url.ViewLocator#locate(javax.servlet.http.HttpServletRequest, org.vraptor.component.LogicMethod, org.vraptor.view.ViewManager)
+	 * @see org.vraptor.url.ViewLocator#locate(VRaptorServletRequest, LogicMethod, ViewManager)
 	 */
 	public ViewManager locate(VRaptorServletRequest req, LogicMethod method, ViewManager defaultViewManager) throws InvalidURLException, LogicException {
 

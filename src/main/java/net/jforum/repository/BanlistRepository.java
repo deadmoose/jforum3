@@ -20,7 +20,7 @@ import net.jforum.entities.Banlist;
 public interface BanlistRepository extends Repository<Banlist> {
 
 	/**
-	 * @see net.jforum.dao.BanlistDAO#selectAll()
+	 * @see net.jforum.core.hibernate.BanlistDAO#getAllBanlists()
 	 */
 	public List<Banlist> getAllBanlists();
 

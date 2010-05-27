@@ -92,7 +92,7 @@ public class MessageId {
 	 * The form is "&lt;topicFirstPostId.topicId.forumId.randomNumber@jforum&gt;".
 	 *
 	 * @param topic The topic we're replying to. It should have at least the
-	 * values for {@link Topic#getFirstPostId()}, {@link Topic#getId()} and {@link Topic#getForumId()}
+	 * values for {@link Topic#getFirstPost()}, {@link Topic#getId()} and {@link Topic#getForum()}
 	 * @return the In-Reply-To header
 	 */
 	public static String buildInReplyTo(Topic topic) {

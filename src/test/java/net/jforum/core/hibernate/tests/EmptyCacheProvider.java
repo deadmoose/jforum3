@@ -23,7 +23,7 @@ import org.hibernate.cache.CacheProvider;
 public class EmptyCacheProvider implements CacheProvider {
 
 	/**
-	 * @see org.hibernate.cache.CacheProvider#buildCache(java.lang.String, java.util.Properties)
+	 * @see org.hibernate.cache.CacheProvider#buildCache(String, java.util.Properties)
 	 */
 	public Cache buildCache(String regionName, Properties properties) throws CacheException {
 		return new EmptyCache();

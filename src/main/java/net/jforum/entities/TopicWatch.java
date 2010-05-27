@@ -72,7 +72,7 @@ public class TopicWatch implements Serializable {
 	}
 
 	/**
-	 * @param topicId the topicId to set
+	 * @param topic the topic to set
 	 */
 	public void setTopic(Topic topic) {
 		this.topic = topic;
@@ -86,7 +86,7 @@ public class TopicWatch implements Serializable {
 	}
 
 	/**
-	 * @param userId the userId to set
+	 * @param user the user to set
 	 */
 	public void setUser(User user) {
 		this.user = user;
@@ -106,9 +106,6 @@ public class TopicWatch implements Serializable {
 		this.read = true;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -122,9 +119,6 @@ public class TopicWatch implements Serializable {
 		return ((TopicWatch)o).getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();

@@ -56,7 +56,7 @@ public class MessageActions {
 
 	/**
 	 * Displays a "waiting moderation" message for replies in topics of moderated forums
-	 * @param forumId
+	 * @param topicId
 	 */
 	public void replyWaitingModeration(@Parameter(key = "topicId") int topicId) {
 		this.propertyBag.put("message", this.i18n.getFormattedMessage("PostShow.waitingModeration",

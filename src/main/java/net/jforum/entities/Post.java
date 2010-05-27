@@ -190,8 +190,7 @@ public class Post implements Serializable {
 	}
 
 	/**
-	 * Gets the forum this post belongs to. In fact, this method makes a call to
-	 * {@link #getTopic().getForum()}
+	 * Gets the forum this post belongs to.
 	 *
 	 * @return the forum
 	 */
@@ -295,10 +294,10 @@ public class Post implements Serializable {
 	}
 
 	/**
-	 * Sets the id of the topic that the message belongs to
+	 * Sets the topic that the message belongs to
 	 *
-	 * @param topicId
-	 *            The id of the topic
+	 * @param topic
+	 *            The topic
 	 */
 	public void setTopic(Topic topic) {
 		this.topic = topic;
@@ -307,8 +306,8 @@ public class Post implements Serializable {
 	/**
 	 * Sets the User that sent the message
 	 *
-	 * @param userId
-	 *            The user Id
+	 * @param user
+	 *            The user
 	 */
 	public void setUser(User user) {
 		this.user = user;
@@ -355,7 +354,7 @@ public class Post implements Serializable {
 	/**
 	 * Sets the IP of the user
 	 *
-	 * @param userIP
+	 * @param userIp
 	 *            The IP address of the user
 	 */
 	public void setUserIp(String userIp) {
@@ -393,8 +392,6 @@ public class Post implements Serializable {
 	}
 
 	/**
-	 * @param editCount
-	 *            the editCount to set
 	 */
 	public void incrementEditCount() {
 		this.editCount++;
@@ -409,9 +406,6 @@ public class Post implements Serializable {
 		return this.editCount;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -425,9 +419,6 @@ public class Post implements Serializable {
 		return ((Post) o).getId() == this.id;
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.id;

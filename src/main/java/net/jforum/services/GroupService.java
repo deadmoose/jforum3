@@ -41,7 +41,7 @@ public class GroupService {
 	}
 
 	/**
-	 * Required by CGLib. Use {@link #GroupService(GroupRepository)} instead
+	 * Required by CGLib. Use {@link #GroupService(GroupRepository, SessionManager, UserRepository)} instead
 	 */
 	public GroupService() {
 	}

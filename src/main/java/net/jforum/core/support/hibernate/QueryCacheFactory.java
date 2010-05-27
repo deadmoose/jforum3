@@ -22,7 +22,7 @@ import org.hibernate.cfg.Settings;
  */
 public class QueryCacheFactory implements org.hibernate.cache.QueryCacheFactory {
 	/**
-	 * @see org.hibernate.cache.QueryCacheFactory#getQueryCache(java.lang.String, org.hibernate.cache.UpdateTimestampsCache, org.hibernate.cfg.Settings, java.util.Properties)
+	 * @see org.hibernate.cache.QueryCacheFactory#getQueryCache(String, org.hibernate.cache.UpdateTimestampsCache, org.hibernate.cfg.Settings, java.util.Properties)
 	 */
 	public QueryCache getQueryCache(String regionName, UpdateTimestampsCache updateTimestampsCache, Settings settings, Properties props)
 			throws HibernateException {

@@ -274,9 +274,6 @@ public class PrivateMessage implements Serializable {
 		return post;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -290,9 +287,6 @@ public class PrivateMessage implements Serializable {
 		return ((PrivateMessage) o).getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();

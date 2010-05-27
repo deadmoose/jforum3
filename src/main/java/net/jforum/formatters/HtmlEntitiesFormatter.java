@@ -18,7 +18,7 @@ import org.apache.commons.lang.StringUtils;
  */
 public class HtmlEntitiesFormatter implements Formatter {
 	/**
-	 * @see net.jforum.formatters.Formatter#format(java.lang.String, PostOptions)
+	 * @see net.jforum.formatters.Formatter#format(String, PostOptions)
 	 */
 	public String format(String text, PostOptions postOptions) {
 		if (!postOptions.isHtmlEnabled()) {

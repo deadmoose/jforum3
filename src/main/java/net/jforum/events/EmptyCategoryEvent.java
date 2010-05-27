@@ -24,32 +24,32 @@ import net.jforum.entities.Topic;
 public class EmptyCategoryEvent implements Event<Category> {
 
 	/**
-	 * @see net.jforum.events.Event#added(Category)
+	 * @see net.jforum.events.Event#added(Object)
 	 */
 	public void added(Category entity) { }
 
 	/**
-	 * @see net.jforum.events.Event#deleted(Category)
+	 * @see net.jforum.events.Event#deleted(Object)
 	 */
 	public void deleted(Category entity) { }
 
 	/**
-	 * @see net.jforum.events.Event#updated(Category)
+	 * @see net.jforum.events.Event#updated(Object)
 	 */
 	public void updated(Category entity) { }
 
 	/**
-	 * @see net.jforum.events.Event#beforeAdd(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeAdd(Object)
 	 */
 	public void beforeAdd(Category entity) {}
 
 	/**
-	 * @see net.jforum.events.Event#beforeDeleted(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeDeleted(Object)
 	 */
 	public void beforeDeleted(Category entity) {}
 
 	/**
-	 * @see net.jforum.events.Event#beforeUpdated(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeUpdated(Object)
 	 */
 	public void beforeUpdated(Category entity) {
 	}

@@ -67,37 +67,37 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evict(java.lang.Class)
+	 * @see org.hibernate.SessionFactory#evict(Class)
 	 */
 	public void evict(Class persistentClass) throws HibernateException {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evict(java.lang.Class, java.io.Serializable)
+	 * @see org.hibernate.SessionFactory#evict(Class, java.io.Serializable)
 	 */
 	public void evict(Class persistentClass, Serializable id) throws HibernateException {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evictCollection(java.lang.String)
+	 * @see org.hibernate.SessionFactory#evictCollection(String)
 	 */
 	public void evictCollection(String roleName) throws HibernateException {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evictCollection(java.lang.String, java.io.Serializable)
+	 * @see org.hibernate.SessionFactory#evictCollection(String, java.io.Serializable)
 	 */
 	public void evictCollection(String roleName, Serializable id) throws HibernateException {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evictEntity(java.lang.String)
+	 * @see org.hibernate.SessionFactory#evictEntity(String)
 	 */
 	public void evictEntity(String entityName) throws HibernateException {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evictEntity(java.lang.String, java.io.Serializable)
+	 * @see org.hibernate.SessionFactory#evictEntity(String, java.io.Serializable)
 	 */
 	public void evictEntity(String entityName, Serializable id) throws HibernateException {
 	}
@@ -109,7 +109,7 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#evictQueries(java.lang.String)
+	 * @see org.hibernate.SessionFactory#evictQueries(String)
 	 */
 	public void evictQueries(String cacheRegion) throws HibernateException {
 	}
@@ -129,21 +129,21 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#getClassMetadata(java.lang.Class)
+	 * @see org.hibernate.SessionFactory#getClassMetadata(Class)
 	 */
 	public ClassMetadata getClassMetadata(Class persistentClass) throws HibernateException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#getClassMetadata(java.lang.String)
+	 * @see org.hibernate.SessionFactory#getClassMetadata(String)
 	 */
 	public ClassMetadata getClassMetadata(String entityName) throws HibernateException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#getCollectionMetadata(java.lang.String)
+	 * @see org.hibernate.SessionFactory#getCollectionMetadata(String)
 	 */
 	public CollectionMetadata getCollectionMetadata(String roleName) throws HibernateException {
 		return null;
@@ -164,7 +164,7 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.SessionFactory#getFilterDefinition(java.lang.String)
+	 * @see org.hibernate.SessionFactory#getFilterDefinition(String)
 	 */
 	public FilterDefinition getFilterDefinition(String filterName) throws HibernateException {
 		return null;
@@ -241,14 +241,14 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getCollectionPersister(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getCollectionPersister(String)
 	 */
 	public CollectionPersister getCollectionPersister(String role) throws MappingException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getCollectionRolesByEntityParticipant(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getCollectionRolesByEntityParticipant(String)
 	 */
 	public Set getCollectionRolesByEntityParticipant(String entityName) {
 		return null;
@@ -276,28 +276,28 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getEntityPersister(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getEntityPersister(String)
 	 */
 	public EntityPersister getEntityPersister(String entityName) throws MappingException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getIdentifierGenerator(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getIdentifierGenerator(String)
 	 */
 	public IdentifierGenerator getIdentifierGenerator(String rootEntityName) {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getImplementors(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getImplementors(String)
 	 */
 	public String[] getImplementors(String className) throws MappingException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getImportedClassName(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getImportedClassName(String)
 	 */
 	public String getImportedClassName(String name) {
 		return null;
@@ -311,14 +311,14 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getNamedQuery(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getNamedQuery(String)
 	 */
 	public NamedQueryDefinition getNamedQuery(String queryName) {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getNamedSQLQuery(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getNamedSQLQuery(String)
 	 */
 	public NamedSQLQueryDefinition getNamedSQLQuery(String queryName) {
 		return null;
@@ -332,7 +332,7 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getQueryCache(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getQueryCache(String)
 	 */
 	public QueryCache getQueryCache(String regionName) throws HibernateException {
 		return null;
@@ -346,21 +346,21 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getResultSetMapping(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getResultSetMapping(String)
 	 */
 	public ResultSetMappingDefinition getResultSetMapping(String name) {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getReturnAliases(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getReturnAliases(String)
 	 */
 	public String[] getReturnAliases(String queryString) throws HibernateException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getReturnTypes(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getReturnTypes(String)
 	 */
 	public Type[] getReturnTypes(String queryString) throws HibernateException {
 		return null;
@@ -374,7 +374,7 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.SessionFactoryImplementor#getSecondLevelCacheRegion(java.lang.String)
+	 * @see org.hibernate.engine.SessionFactoryImplementor#getSecondLevelCacheRegion(String)
 	 */
 	public Cache getSecondLevelCacheRegion(String regionName) {
 		return null;
@@ -431,21 +431,21 @@ public class FakeSessionFactory implements SessionFactoryImplementor {
 	}
 
 	/**
-	 * @see org.hibernate.engine.Mapping#getIdentifierPropertyName(java.lang.String)
+	 * @see org.hibernate.engine.Mapping#getIdentifierPropertyName(String)
 	 */
 	public String getIdentifierPropertyName(String className) throws MappingException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.Mapping#getIdentifierType(java.lang.String)
+	 * @see org.hibernate.engine.Mapping#getIdentifierType(String)
 	 */
 	public Type getIdentifierType(String className) throws MappingException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.engine.Mapping#getReferencedPropertyType(java.lang.String, java.lang.String)
+	 * @see org.hibernate.engine.Mapping#getReferencedPropertyType(String, String)
 	 */
 	public Type getReferencedPropertyType(String className, String propertyName) throws MappingException {
 		return null;

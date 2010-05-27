@@ -21,32 +21,32 @@ import net.jforum.entities.Post;
  */
 public class EmptyPostEvent implements Event<Post> {
 	/**
-	 * @see net.jforum.events.PostEvent#added(net.jforum.entities.Post)
+	 * @see net.jforum.events.Event#added(Object)
 	 */
 	public void added(Post post) { }
 
 	/**
-	 * @see net.jforum.events.PostEvent#deleted(net.jforum.entities.Post)
+	 * @see net.jforum.events.Event#deleted(Object)
 	 */
 	public void deleted(Post post) { }
 
 	/**
-	 * @see net.jforum.events.PostEvent#updated(net.jforum.entities.Post)
+	 * @see net.jforum.events.Event#updated(Object)
 	 */
 	public void updated(Post post) { }
 
 	/**
-	 * @see net.jforum.events.Event#beforeAdd(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeAdd(Object)
 	 */
 	public void beforeAdd(Post entity) { }
 
 	/**
-	 * @see net.jforum.events.Event#beforeAdd(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeAdd(Object)
 	 */
 	public void beforeDeleted(Post entity) { }
 
 	/**
-	 * @see net.jforum.events.Event#beforeUpdated(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeUpdated(Object)
 	 */
 	public void beforeUpdated(Post entity) {
 	}

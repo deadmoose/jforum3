@@ -353,7 +353,7 @@ public class PermissionOptions {
 	}
 
 	/**
-	 * @param roleExists
+	 * @param value
 	 */
 	public void setCanManageForums(boolean value) {
 		this.canManageForums = value;

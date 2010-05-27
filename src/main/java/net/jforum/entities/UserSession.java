@@ -360,7 +360,6 @@ public class UserSession  {
 	}
 
 	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
 	public boolean equals(Object o) {
@@ -375,9 +374,6 @@ public class UserSession  {
 		return this.getSessionId().equals(((UserSession)o).getSessionId());
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getSessionId().hashCode();

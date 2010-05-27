@@ -66,7 +66,7 @@ public class I18nTag extends JForumTag implements DynamicAttributes {
 	}
 
 	/**
-	 * @see javax.servlet.jsp.tagext.DynamicAttributes#setDynamicAttribute(java.lang.String, java.lang.String, java.lang.Object)
+	 * @see javax.servlet.jsp.tagext.DynamicAttributes#setDynamicAttribute(String, String, Object)
 	 */
 	public void setDynamicAttribute(String uri, String localName, Object value) throws JspException {
 		params.add(value);

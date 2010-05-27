@@ -70,7 +70,7 @@ public class I18n {
 	}
 
 	/**
-	 * @see #getMessage(String, String, Object[])
+	 * @see #getMessage(String, String)
 	 * @param key String
 	 * @param args Object
 	 * @return String

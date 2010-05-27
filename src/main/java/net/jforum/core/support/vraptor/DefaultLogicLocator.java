@@ -53,7 +53,7 @@ public class DefaultLogicLocator implements LogicLocator {
 	}
 
 	/**
-	 * @see org.vraptor.url.LogicLocator#locate(javax.servlet.http.HttpServletRequest)
+	 * @see org.vraptor.url.LogicLocator#locate(VRaptorServletRequest)
 	 */
 	public LogicMethod locate(VRaptorServletRequest request) throws InvalidURLException, LogicNotFoundException, ComponentNotFoundException {
 		ApplicationContext springContext = (ApplicationContext)request.getSession()

@@ -29,7 +29,7 @@ public class ConfigDAO extends HibernateGenericDAO<Config> implements ConfigRepo
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#update(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#update(Object)
 	 */
 	@Override
 	public void update(Config entity) {
@@ -37,7 +37,7 @@ public class ConfigDAO extends HibernateGenericDAO<Config> implements ConfigRepo
 	}
 
 	/**
-	 * @see net.jforum.repository.ConfigRepository#getByName(java.lang.String)
+	 * @see net.jforum.repository.ConfigRepository#getByName(String)
 	 */
 	public Config getByName(String configName) {
 		return (Config)this.session().createCriteria(this.persistClass)

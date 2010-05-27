@@ -104,7 +104,7 @@ public class JForumConfig extends PropertiesConfiguration {
 	}
 
 	/**
-	 * @see org.apache.commons.configuration.BaseConfiguration#addPropertyDirect(java.lang.String, java.lang.Object)
+	 * @see org.apache.commons.configuration.BaseConfiguration#addPropertyDirect(String, Object)
 	 */
 	@Override
 	protected void addPropertyDirect(String key, Object value) {

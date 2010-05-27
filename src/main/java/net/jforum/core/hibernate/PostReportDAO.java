@@ -48,7 +48,7 @@ public class PostReportDAO extends HibernateGenericDAO<PostReport> implements Po
 	}
 
 	/**
-	 * @see net.jforum.repository.PostReportRepository#getAll()
+	 * @see net.jforum.repository.PostReportRepository#getAll(PostReportStatus, int...)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<PostReport> getAll(PostReportStatus status, int... forumIds) {

@@ -80,7 +80,7 @@ public class Session {
 	}
 
 	/**
-	 * @param Start the sessionStart to set
+	 * @param start the sessionStart to set
 	 */
 	public void setStart(Date start) {
 		this.start = start;
@@ -94,7 +94,7 @@ public class Session {
 	}
 
 	/**
-	 * @param sessionTime the sessionTime to set
+	 * @param date
 	 */
 	public void setLastAccessed(Date date) {
 		this.lastAccessed = date;

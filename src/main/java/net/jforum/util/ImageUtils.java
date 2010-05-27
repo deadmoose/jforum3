@@ -184,8 +184,8 @@ public class ImageUtils {
 	 * createHeadlessSmoothBufferedImage method.
 	 *
 	 * @param image The image to convert
-	 * @param w The desired image width
-	 * @param h The desired image height
+	 * @param width The desired image width
+	 * @param height The desired image height
 	 * @return The converted image
 	 * @param type int
 	 */
@@ -214,8 +214,8 @@ public class ImageUtils {
 	 * resulting image will be smoothly scaled using bilinear filtering.
 	 *
 	 * @param source The image to convert
-	 * @param w The desired image width
-	 * @param h The desired image height
+	 * @param width The desired image width
+	 * @param height The desired image height
 	 * @return The converted image
 	 * @param type int
 	 */

@@ -38,7 +38,7 @@ public class AOPTestRankingDAO extends HibernateGenericDAO<Ranking> implements R
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#add(java.lang.Object)
+	 * @see net.jforum.repository.Repository#add(Object)
 	 */
 	@Override
 	public void add(Ranking entity) {
@@ -53,14 +53,14 @@ public class AOPTestRankingDAO extends HibernateGenericDAO<Ranking> implements R
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#remove(java.lang.Object)
+	 * @see net.jforum.repository.Repository#remove(Object)
 	 */
 	@Override
 	public void remove(Ranking entity) {
 	}
 
 	/**
-	 * @see net.jforum.repository.Repository#update(java.lang.Object)
+	 * @see net.jforum.repository.Repository#update(Object)
 	 */
 	@Override
 	public void update(Ranking entity) {

@@ -144,9 +144,6 @@ public class Group implements Serializable {
 		this.name = name;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -160,17 +157,11 @@ public class Group implements Serializable {
 		return ((Group)o).getId()  == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return String.format("%d, %s", this.id, this.name);

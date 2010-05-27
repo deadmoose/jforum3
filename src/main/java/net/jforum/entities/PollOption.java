@@ -91,9 +91,6 @@ public class PollOption implements Serializable {
 		this.voteCount++;
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return new StringBuilder(128).append('[').append(this.id).append(", ")
@@ -101,9 +98,6 @@ public class PollOption implements Serializable {
 			.toString();
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (!(o instanceof PollOption)) {
@@ -116,9 +110,6 @@ public class PollOption implements Serializable {
 			&& po.getVoteCount() == this.voteCount;
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		int result = 17;

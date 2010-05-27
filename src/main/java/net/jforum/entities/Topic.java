@@ -291,7 +291,7 @@ public class Topic implements Serializable {
 	/**
 	 * Sets the Forum associeted with this topic
 	 *
-	 * @param Forum The Forum to set
+	 * @param forum The Forum to set
 	 */
 	public void setForum(Forum forum) {
 		this.forum = forum;
@@ -367,9 +367,6 @@ public class Topic implements Serializable {
 		return this.hasAttachment;
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -456,17 +453,11 @@ public class Topic implements Serializable {
 		return this.pendingModeration;
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.id;
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return new StringBuilder(64)

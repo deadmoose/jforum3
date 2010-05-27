@@ -30,10 +30,10 @@ public class TaggingCloudTag extends ImportFileTag {
 
 	public static final String DEFAULT_URL = "/tag/tagCloud.jsp";
 	public static final int DEFAULT_TAGCOUNT = 100;
-	
+
 	private Forum forum;
 	private int tagCount;
-	
+
 	private TagService tagService;
 	private SessionManager sessionManager;
 
@@ -47,7 +47,7 @@ public class TaggingCloudTag extends ImportFileTag {
 	}
 
 	/**
-	 * @param tagNumber the tagNumber to set
+	 * @param tagCount
 	 */
 	public void setTagCount(int tagCount) {
 		this.tagCount = tagCount;
@@ -67,10 +67,10 @@ public class TaggingCloudTag extends ImportFileTag {
 	public void doTag() throws JspException, IOException {
 		if(tagCount<1)
 			tagCount = DEFAULT_TAGCOUNT;
-		
+
 		UserSession userSession = this.sessionManager.getUserSession();
 		RoleManager roleManager = userSession.getRoleManager();
-		
+
 		Map<String,Integer> hotTagsWithGroupIndex = null;
 		//forum index page
 		if(forum == null){
@@ -78,33 +78,33 @@ public class TaggingCloudTag extends ImportFileTag {
 		}else{//topic list page
 			hotTagsWithGroupIndex = this.tagService.getHotTags(forum, tagCount, 7);
 		}
-		
+
 		if(hotTagsWithGroupIndex.size()>0){
 			Map<String,String> tagClass = this.getTagWithClass(hotTagsWithGroupIndex);
 			this.request().setAttribute("tags",	tagClass);
-			
+
 			if(this.url == null)
 				this.setUrl(DEFAULT_URL);
-			
+
 			//process the import file.
 			super.doTag();
 		}
-		
+
 	}
-	
+
 	private Map<String,String> getTagWithClass(Map<String,Integer> hotTagsWithGroupIndex){
 		Map<String,String> tagClass = new LinkedHashMap<String,String>();
 		for(Map.Entry<String, Integer> entry : hotTagsWithGroupIndex.entrySet()){
 			String tagName = entry.getKey();
-			Integer groupIndex = (Integer) entry.getValue();
+			Integer groupIndex = entry.getValue();
 			String cssClass = this.getClass(groupIndex);
-			
+
 			tagClass.put(tagName, cssClass);
 		}
-		
+
 		return tagClass;
 	}
-	
+
 	private String getClass(int groupIndex){
 		switch(groupIndex){
 			case 6:

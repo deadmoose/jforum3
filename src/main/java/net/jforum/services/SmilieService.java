@@ -60,7 +60,7 @@ public class SmilieService {
 	/**
 	 * Updates a existing smilie
 	 * @param smilie
-	 * @param file
+	 * @param uploadedFile
 	 */
 	public void update(Smilie smilie, UploadedFileInformation uploadedFile) {
 		this.applyCommonConstraints(smilie);

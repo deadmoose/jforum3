@@ -95,7 +95,7 @@ public class BBCodeConfigParser extends DefaultHandler {
 	}
 
 	/**
-	 * @see org.xml.sax.helpers.DefaultHandler#startElement(java.lang.String, java.lang.String, java.lang.String, org.xml.sax.Attributes)
+	 * @see org.xml.sax.helpers.DefaultHandler#startElement(String, String, String, org.xml.sax.Attributes)
 	 */
 	@Override
 	public void startElement(String uri, String localName, String tag, Attributes attrs) {
@@ -118,7 +118,7 @@ public class BBCodeConfigParser extends DefaultHandler {
 	}
 
 	/**
-	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String, java.lang.String, java.lang.String)
+	 * @see org.xml.sax.helpers.DefaultHandler#endElement(String, String, String)
 	 */
 	@Override
 	public void endElement(String uri, String localName, String tag) {

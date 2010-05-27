@@ -22,37 +22,37 @@ import net.jforum.entities.Forum;
 public class EmptyForumEvent implements Event<Forum> {
 
 	/**
-	 * @see net.jforum.events.Event#added(java.lang.Object)
+	 * @see net.jforum.events.Event#added(Object)
 	 */
 	public void added(Forum entity) {
 	}
 
 	/**
-	 * @see net.jforum.events.Event#beforeAdd(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeAdd(Object)
 	 */
 	public void beforeAdd(Forum entity) {
 	}
 
 	/**
-	 * @see net.jforum.events.Event#deleted(java.lang.Object)
+	 * @see net.jforum.events.Event#deleted(Object)
 	 */
 	public void deleted(Forum entity) {
 	}
 
 	/**
-	 * @see net.jforum.events.Event#updated(java.lang.Object)
+	 * @see net.jforum.events.Event#updated(Object)
 	 */
 	public void updated(Forum entity) {
 	}
 
 	/**
-	 * @see net.jforum.events.Event#beforeDeleted(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeDeleted(Object)
 	 */
 	public void beforeDeleted(Forum entity) {
 	}
 
 	/**
-	 * @see net.jforum.events.Event#beforeUpdated(java.lang.Object)
+	 * @see net.jforum.events.Event#beforeUpdated(Object)
 	 */
 	public void beforeUpdated(Forum entity) {
 	}

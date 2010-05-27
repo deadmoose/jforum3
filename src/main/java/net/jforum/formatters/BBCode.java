@@ -117,17 +117,11 @@ public class BBCode implements Serializable {
 		return this.alwaysProcess;
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return (this.getRegex() + this.getReplace() + this.getTagName() + this.alwaysProcess).hashCode();
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {

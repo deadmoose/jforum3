@@ -21,7 +21,7 @@ import net.jforum.entities.Category;
 public class CategoryOrderComparator implements Comparator<Category>
 {
 	/**
-	 * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
+	 * @see java.util.Comparator#compare(Object, Object)
 	 */
 	public int compare(Category c1, Category c2)
 	{

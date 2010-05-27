@@ -36,7 +36,7 @@ public class GroupDAO extends HibernateGenericDAO<Group> implements GroupReposit
 	}
 
 	/**
-	 * @see net.jforum.repository.GroupRepository#getByName(java.lang.String)
+	 * @see net.jforum.repository.GroupRepository#getByName(String)
 	 */
 	public Group getByName(String groupName) {
 		return (Group) this.session().createCriteria(this.persistClass)
@@ -45,7 +45,7 @@ public class GroupDAO extends HibernateGenericDAO<Group> implements GroupReposit
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#remove(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#remove(Object)
 	 */
 	@Override
 	public void remove(Group group) {

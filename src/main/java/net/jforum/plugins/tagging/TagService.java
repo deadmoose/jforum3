@@ -128,7 +128,8 @@ public class TagService {
 	/**
 	 * get "limit" hot tags according to hot rate, group them into "group" groups return <tagName,groupNumber> order by tag name
 	 *
-	 * @param itmes count
+	 * @param limit
+	 * @param group
 	 * @return
 	 * @deprecated replaced by <code>getHotTags(int limit,int group,RoleManager roleManager)</code>
 	 */
@@ -143,7 +144,9 @@ public class TagService {
 	 * get "limit" hot tags according to hot rate, group them into "group" groups filter the some tag that the user can't access return
 	 * <tagName,groupNumber> order by tag name
 	 *
-	 * @param itmes count
+	 * @param limit
+	 * @param group
+	 * @param roleManager
 	 * @return
 	 */
 	public Map<String, Integer> getHotTags(int limit, int group, RoleManager roleManager) {

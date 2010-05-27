@@ -10,7 +10,6 @@
  */
 package net.jforum.core;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -234,7 +233,6 @@ public class SessionManager {
 	 * Do a refresh in the user's session. This method will update the
 	 * last visit time for the current user, as well checking for
 	 * authentication if the session is new or the SSO user has changed
-	 * @throws IOException
 	 */
 	public UserSession refreshSession(HttpServletRequest request, HttpServletResponse response) {
 		boolean isSSOAuthentication = ConfigKeys.TYPE_SSO.equals(this.config.getValue(ConfigKeys.AUTHENTICATION_TYPE));

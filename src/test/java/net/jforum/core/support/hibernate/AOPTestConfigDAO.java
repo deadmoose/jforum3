@@ -30,21 +30,21 @@ public class AOPTestConfigDAO extends HibernateGenericDAO<Config> implements Con
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(Object)
 	 */
 	@Override
 	public void add(Config entity) {
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#update(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#update(Object)
 	 */
 	@Override
 	public void update(Config entity) {
 	}
 
 	/**
-	 * @see net.jforum.repository.ConfigRepository#getByName(java.lang.String)
+	 * @see net.jforum.repository.ConfigRepository#getByName(String)
 	 */
 	public Config getByName(String configName) {
 		return null;

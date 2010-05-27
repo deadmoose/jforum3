@@ -33,7 +33,7 @@ public class EmptyCache implements Cache {
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#get(java.lang.Object)
+	 * @see org.hibernate.cache.Cache#get(Object)
 	 */
 	public Object get(Object key) throws CacheException {
 		return null;
@@ -75,7 +75,7 @@ public class EmptyCache implements Cache {
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#lock(java.lang.Object)
+	 * @see org.hibernate.cache.Cache#lock(Object)
 	 */
 	public void lock(Object key) throws CacheException {
 	}
@@ -88,20 +88,20 @@ public class EmptyCache implements Cache {
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#put(java.lang.Object, java.lang.Object)
+	 * @see org.hibernate.cache.Cache#put(Object, Object)
 	 */
 	public void put(Object key, Object value) throws CacheException {
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#read(java.lang.Object)
+	 * @see org.hibernate.cache.Cache#read(Object)
 	 */
 	public Object read(Object key) throws CacheException {
 		return null;
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#remove(java.lang.Object)
+	 * @see org.hibernate.cache.Cache#remove(Object)
 	 */
 	public void remove(Object key) throws CacheException {
 	}
@@ -115,13 +115,13 @@ public class EmptyCache implements Cache {
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#unlock(java.lang.Object)
+	 * @see org.hibernate.cache.Cache#unlock(Object)
 	 */
 	public void unlock(Object key) throws CacheException {
 	}
 
 	/**
-	 * @see org.hibernate.cache.Cache#update(java.lang.Object, java.lang.Object)
+	 * @see org.hibernate.cache.Cache#update(Object, Object)
 	 */
 	public void update(Object key, Object value) throws CacheException {
 	}

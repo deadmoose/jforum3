@@ -32,7 +32,7 @@ public class TopicDAO extends HibernateGenericDAO<Topic> implements TopicReposit
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#remove(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#remove(Object)
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -104,7 +104,7 @@ public class TopicDAO extends HibernateGenericDAO<Topic> implements TopicReposit
 	}
 
 	/**
-	 * @see net.jforum.repository.PostRepository#getAllPosts(net.jforum.entities.Topic, int, int)
+	 * @see net.jforum.repository.TopicRepository#getPosts(net.jforum.entities.Topic, int, int)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Post> getPosts(Topic topic, int startFrom, int count) {

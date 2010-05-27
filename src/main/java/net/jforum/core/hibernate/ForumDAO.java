@@ -62,7 +62,7 @@ public class ForumDAO extends HibernateGenericDAO<Forum> implements ForumReposit
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(Object)
 	 */
 	@Override
 	public void add(Forum entity) {

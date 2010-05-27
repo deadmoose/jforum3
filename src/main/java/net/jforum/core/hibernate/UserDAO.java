@@ -36,7 +36,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#getByEmail(java.lang.String)
+	 * @see net.jforum.repository.UserRepository#getByEmail(String)
 	 */
 	public User getByEmail(String email) {
 		return (User)this.session().createCriteria(this.persistClass)
@@ -45,7 +45,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#isUsernameAvailable(java.lang.String, java.lang.String)
+	 * @see net.jforum.repository.UserRepository#isUsernameAvailable(String, String)
 	 */
 	public boolean isUsernameAvailable(String username, String email) {
 		return (Integer)this.session().createCriteria(User.class)
@@ -78,7 +78,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#getByUsername(java.lang.String)
+	 * @see net.jforum.repository.UserRepository#getByUsername(String)
 	 */
 	public User getByUsername(String username){
 		return (User)this.session().createCriteria(this.persistClass)
@@ -98,7 +98,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	}
 
 	/**
-	 * @see {@link UserRepository#findByUserName(String)}
+	 * @see UserRepository#findByUserName(String)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<User> findByUserName(String username){
@@ -110,7 +110,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#findByUserName(java.lang.String, java.util.List)
+	 * @see net.jforum.repository.UserRepository#findByUserName(String, java.util.List)
 	 */
 	@SuppressWarnings("unchecked")
 	public List<User> findByUserName(String username, List<Group> filterGroups) {
@@ -184,7 +184,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	}
 
 	/**
-	 * @see net.jforum.repository.UserRepository#validateLostPasswordHash(java.lang.String, java.lang.String)
+	 * @see net.jforum.repository.UserRepository#validateLostPasswordHash(String, String)
 	 */
 	public User validateLostPasswordHash(String username, String hash) {
 		return (User)this.session().createCriteria(this.persistClass)

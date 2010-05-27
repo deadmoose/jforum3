@@ -123,14 +123,14 @@ public class AttachmentExtension {
 	}
 
 	/**
-	 * @return Returns the extensionGroupId.
+	 * @return Returns the extensionGroup.
 	 */
 	public AttachmentExtensionGroup getExtensionGroup() {
 		return this.extensionGroup;
 	}
 
 	/**
-	 * @param extensionGroupId The extensionGroupId to set.
+	 * @param extensionGroup The extensionGroup to set.
 	 */
 	public void setExtensionGroup(AttachmentExtensionGroup extensionGroup) {
 		this.extensionGroup = extensionGroup;

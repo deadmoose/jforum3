@@ -32,14 +32,14 @@ public class DefaultViewManager implements ViewManager {
 	/**
 	 * Creates the overriden view manager with a default view manager
 	 *
-	 * @param viewManager the default view manager
+	 * @param regexPattern
 	 */
 	public DefaultViewManager(String regexPattern) {
 		this.replacement = this.translateExpression(regexPattern);
 	}
 
 	/**
-	 * @see org.vraptor.view.ViewManager#forward(org.vraptor.LogicRequest, java.lang.String)
+	 * @see org.vraptor.view.ViewManager#forward(org.vraptor.LogicRequest, String)
 	 */
 	public void forward(LogicRequest logicRequest, String result) throws ViewException {
 		if (!"true".equals(logicRequest.getRequest().getAttribute(ConfigKeys.IGNORE_VIEW_MANAGER_REDIRECT))) {

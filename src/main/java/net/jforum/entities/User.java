@@ -667,9 +667,9 @@ public class User implements Serializable {
 	}
 
 	/**
-	 * Sets the ranking id
+	 * Sets the ranking
 	 *
-	 * @param rankId The id of the ranking
+	 * @param ranking The ranking
 	 */
 	public void setRanking(Ranking ranking) {
 		this.ranking = ranking;

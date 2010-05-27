@@ -36,7 +36,6 @@ public class TopicReplySpammer extends Spammer {
 	 * Creates a new instance with a message's contents send
 	 *
 	 * @param topic the topic we are replying to
-	 * @param post the post instance, with the message's contents. If null, only a notification will be sent
 	 * @param users list of users who'll be notified
 	 */
 	public void prepare(Topic topic, List<User> users) {

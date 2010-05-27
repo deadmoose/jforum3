@@ -32,7 +32,7 @@ public class PrivateMessageDAO extends HibernateGenericDAO<PrivateMessage> imple
 	}
 
 	/**
-	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(java.lang.Object)
+	 * @see net.jforum.core.hibernate.HibernateGenericDAO#add(Object)
 	 */
 	@Override
 	public void add(PrivateMessage entity) {

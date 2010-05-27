@@ -293,7 +293,6 @@ public abstract class Spammer {
 	 * Gets the message text to send in the email.
 	 *
 	 * @param templateName The file with the email template, relative to the application root
-	 * @return The email message text
 	 * @throws Exception
 	 */
 	protected void createTemplate(String templateName) throws Exception {

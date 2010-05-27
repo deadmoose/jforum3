@@ -36,7 +36,7 @@ public interface ForumLimitedTimeRepository extends Repository<ForumLimitedTime>
 
 	/**
 	 * save or Updates the information of an existing object
-	 * @param instance the instance to update
+	 * @param forumLimitedTime
 	 */
 	public void saveOrUpdate(ForumLimitedTime fourmLimitedTime);
 }

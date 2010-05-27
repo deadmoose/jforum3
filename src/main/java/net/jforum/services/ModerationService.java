@@ -42,7 +42,7 @@ public class ModerationService {
 	}
 
 	/**
-	 * Required by CGLib. Use {@link #ModerationService(PostRepository, ForumRepository, TopicRepository)} instead
+	 * Required by CGLib. Use {@link #ModerationService(PostRepository, ForumRepository, TopicRepository, ModerationLogService)} instead
 	 */
 	public ModerationService() { }
 

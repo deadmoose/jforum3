@@ -208,7 +208,7 @@ public class Forum implements Serializable {
 	/**
 	 * Sets the category id
 	 *
-	 * @param idCategories The ID of the category to set to the forum
+	 * @param category The category to set to the forum
 	 */
 	public void setCategory(Category category) {
 		this.category = category;
@@ -264,7 +264,7 @@ public class Forum implements Serializable {
 	}
 
 	/**
-	 * @see {@link ForumRepository#getTopics(Forum, int, int)}
+	 * @see ForumRepository#getTopics(Forum, int, int)
 	 */
 	public List<Topic> getTopics(int start, int count) {
 		this.assertRepository();
@@ -272,7 +272,7 @@ public class Forum implements Serializable {
 	}
 
 	/**
-	 * @see {@link ForumRepository#getTopicsPendingModeration(Forum)}
+	 * @see ForumRepository#getTopicsPendingModeration(Forum)
 	 */
 	public List<Topic> getTopicsPendingModeration() {
 		if (this.isModerated()) {
@@ -284,9 +284,6 @@ public class Forum implements Serializable {
 		}
 	}
 
-	/**
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object o) {
 		if (o == this) {
@@ -301,17 +298,11 @@ public class Forum implements Serializable {
 		return f.getId() == this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		return this.getId();
 	}
 
-	/**
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return new StringBuilder(64)
