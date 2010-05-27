@@ -44,7 +44,7 @@ public class JForumConfig extends PropertiesConfiguration {
 		try {
 			loadProps();
 
-			//in test environment, hibernateTask could be null 
+			//in test environment, hibernateTask could be null
 			if(hibernateTask != null){
 				hibernateTask.execute(new HibernateRunnable() {
 					public void run() {

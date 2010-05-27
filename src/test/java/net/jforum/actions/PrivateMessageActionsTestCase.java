@@ -274,7 +274,7 @@ public class PrivateMessageActionsTestCase {
 
 			one(roleManager).getCanOnlyContactModerators(); will(returnValue(true));
 			one(viewService).renderView("sendToDenied");
-			
+
 			ignoring(propertyBag); ignoring(smilieRepository);
 		}});
 

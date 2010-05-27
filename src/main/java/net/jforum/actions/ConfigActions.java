@@ -46,7 +46,7 @@ public class ConfigActions {
 	private final JForumConfig config;
 	private final ViewService viewService;
 
-	public ConfigActions(ConfigService service, ViewPropertyBag propertyBag, VRaptorServletRequest request, 
+	public ConfigActions(ConfigService service, ViewPropertyBag propertyBag, VRaptorServletRequest request,
 			JForumConfig config, ViewService viewService) {
 		this.service = service;
 		this.propertyBag = propertyBag;

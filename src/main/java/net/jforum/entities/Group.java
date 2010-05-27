@@ -52,7 +52,7 @@ public class Group implements Serializable {
 	@Cascade({CascadeType.ALL, CascadeType.DELETE_ORPHAN})
 	@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 	private List<Role> roles = new ArrayList<Role>();
-	
+
 	@ManyToMany(mappedBy = "groups")
 	private List<User> users = new ArrayList<User>();
 
@@ -65,7 +65,7 @@ public class Group implements Serializable {
 
 		return false;
 	}
-	
+
 	public boolean roleExists(String name, int value) {
 		for (Role role : this.roles) {
 			if (role.getName().equals(name)) {

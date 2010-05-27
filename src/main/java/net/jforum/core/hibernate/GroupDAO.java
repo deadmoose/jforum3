@@ -57,6 +57,6 @@ public class GroupDAO extends HibernateGenericDAO<Group> implements GroupReposit
 		}
 		super.remove(group);
 	}
-	
-	
+
+
 }

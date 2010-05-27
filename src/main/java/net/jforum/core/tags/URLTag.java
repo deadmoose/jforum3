@@ -1,10 +1,10 @@
 /*
  * Copyright (c) JForum Team. All rights reserved.
- * 
- * The software in this package is published under the terms of the LGPL 
- * license a copy of which has been included with this distribution in the 
+ *
+ * The software in this package is published under the terms of the LGPL
+ * license a copy of which has been included with this distribution in the
  * license.txt file.
- * 
+ *
  * The JForum Project
  * http://www.jforum.net
  */
@@ -24,9 +24,9 @@ import net.jforum.util.ConfigKeys;
  * @author Rafael Steil
  */
 public class URLTag extends JForumTag {
-	
+
 	public static final String URL_ENCODE ="UTF-8";
-	
+
 	private String address;
 	private boolean encode;
 
@@ -38,7 +38,7 @@ public class URLTag extends JForumTag {
 
 		StringBuilder urlBuilder = new StringBuilder(128)
 						.append(this.request().getContextPath());
-		
+
 		if(encode){
 			if(this.address == null)
 				this.address="";
@@ -50,11 +50,11 @@ public class URLTag extends JForumTag {
 		}else{
 			urlBuilder.append(this.address);
 		}
-			
+
 		urlBuilder.append(this.config().getString(ConfigKeys.SERVLET_EXTENSION));
 		this.write(this.response().encodeURL(urlBuilder.toString()));
 	}
-	
+
 	/**
 	 * @param address the resource to set
 	 */
@@ -68,5 +68,5 @@ public class URLTag extends JForumTag {
 	public void setEncode(boolean encode) {
 		this.encode = encode;
 	}
-	
+
 }

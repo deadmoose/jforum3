@@ -68,7 +68,7 @@ public class CategoryService {
 	 */
 	public void update(Category category) {
 		this.applyCommonConstraints(category);
-		
+
 		if (category.getId() == 0) {
 			throw new ValidationException("update() expects a category with an existing id");
 		}

@@ -40,7 +40,7 @@ public class ConfigDAOTestCase extends AbstractDAOTestCase<Config> {
 
 	@Test
 	public void getByNameExpectSuccess() {
-		
+
 		ConfigDAO dao = this.newDao();
 		Config c = this.newConfig("k1", "v1"); this.insert(c, dao);
 		Config loaded = dao.getByName("k1");

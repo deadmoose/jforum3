@@ -54,7 +54,7 @@ public class PostActionsTestCase {
 		viewService, smilieRepository, postService, config, userSession, null, null);
     private ModerationLog moderationLog = new ModerationLog();
 
-  
+
 
 	@Test
 	public void deleteHasMorePostsShouldRedirectToTopicListing() {

@@ -165,7 +165,7 @@ public class AOPTestUserDAO extends HibernateGenericDAO<User> implements UserRep
     }
 
     /**
-     * @see net.jforum.repository.UserRepository#getTopics(net.jforum.entities.User, int, int)  
+     * @see net.jforum.repository.UserRepository#getTopics(net.jforum.entities.User, int, int)
      */
     public List<Topic> getTopics(User user, int start, int recordsPerPage) {
         return null;

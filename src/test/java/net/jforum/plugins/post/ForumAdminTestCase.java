@@ -48,7 +48,7 @@ public class ForumAdminTestCase {
 	private JForumConfig config = context.mock(JForumConfig.class);
 	private ForumRepository forumRepository = context.mock(ForumRepository.class);
 	private ForumAdminExtension extension = new ForumAdminExtension(config, forumRepository, propertyBag, repository, sessionManager);
-	
+
 	private RoleManager roleManager = context.mock(RoleManager.class);
 
 	@SuppressWarnings("serial")
@@ -58,7 +58,7 @@ public class ForumAdminTestCase {
 
 		context.checking(new Expectations() {{
 			one(config).getBoolean("forum.time.limited.enable", false); will(returnValue(true));
-			
+
 			one(forumRepository).get(forumId); will(returnValue(new Forum(){{setId(1);}}));
 			one(repository).getLimitedTime(with(any(Forum.class))); will(returnValue(0L));
 			one(propertyBag).put("forumTimeLimitedEnable", true);
@@ -102,13 +102,13 @@ public class ForumAdminTestCase {
 	@Test
 	public void addSave() {
 		this.securityChecking();
-		
+
 		context.checking(new Expectations() {{
 			one(config).getBoolean("forum.time.limited.enable", false); will(returnValue(true));
 
 			Forum forum = new Forum();
 			forum.setId(1);
-			
+
 			one(roleManager).isAdministrator(); will(returnValue(true));
 			one(propertyBag).get("forum"); will(returnValue(forum));
 			one(repository).add(with(any(ForumLimitedTime.class)));

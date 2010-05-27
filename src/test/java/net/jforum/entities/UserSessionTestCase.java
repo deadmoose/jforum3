@@ -51,7 +51,7 @@ public class UserSessionTestCase {
 
 		this.loadTopicsReadTime();
 	}
-	
+
 	@Test
 	public void isForumReadLastPostTimeNewerThanLastVisitTopicTrackingSmallerThanLastPostExpectFalse() {
 		state.become("logged");

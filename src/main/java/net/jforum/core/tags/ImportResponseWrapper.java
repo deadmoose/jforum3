@@ -41,7 +41,7 @@ public class ImportResponseWrapper extends HttpServletResponseWrapper {
 	 * resource uses a Writer. And we decode the OutputStream's bytes using OUR
 	 * tag's 'charEncoding' attribute, or ISO-8859-1 as the default. We thus
 	 * ignore setLocale() and setContentType() in this wrapper.
-	 * 
+	 *
 	 * In other words, the target's asserted encoding is used to convert from a
 	 * Writer to an OutputStream, which is typically the medium through with the
 	 * target will communicate its ultimate response. Since we short-circuit

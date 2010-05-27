@@ -1,10 +1,10 @@
 /*
  * Copyright (c) JForum Team. All rights reserved.
- * 
- * The software in this package is published under the terms of the LGPL 
- * license a copy of which has been included with this distribution in the 
+ *
+ * The software in this package is published under the terms of the LGPL
+ * license a copy of which has been included with this distribution in the
  * license.txt file.
- * 
+ *
  * The JForum Project
  * http://www.jforum.net
  */
@@ -29,15 +29,15 @@ public class ForumWatch implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
+
 	@Column(name = "forum_id")
 	private int forumId;
-	
+
 	@Column(name = "user_id")
 	private int userId;
-	
+
 	public ForumWatch() {}
-	
+
 	public ForumWatch(int forumId, int userId) {
 		this.setUserId(userId);
 		this.setForumId(forumId);
@@ -84,7 +84,7 @@ public class ForumWatch implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	/**
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -93,16 +93,16 @@ public class ForumWatch implements Serializable {
 		if (o == this) {
 			return true;
 		}
-		
+
 		if (!(o instanceof ForumWatch)) {
 			return false;
 		}
-		
+
 		ForumWatch fw = (ForumWatch)o;
 		return fw.getForumId() == this.getForumId()
 			&& fw.getUserId() == this.getUserId();
 	}
-	
+
 	/**
 	 * @see java.lang.Object#hashCode()
 	 */

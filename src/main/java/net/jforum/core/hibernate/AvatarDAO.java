@@ -76,7 +76,7 @@ public class AvatarDAO extends HibernateGenericDAO<Avatar> implements AvatarRepo
 				this.session().save(user);
 			}
 		}
-		
+
 		super.remove(avatar);
 	}
 }
