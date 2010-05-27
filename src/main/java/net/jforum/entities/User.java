@@ -527,7 +527,7 @@ public class User implements Serializable {
 	 *
 	 * @return <code>true</code> if the avatar is current user upload
 	 */
-	public boolean isCustomizeAvatar(){
+	public boolean isCustomizeAvatar() {
 		return avatar != null && this.equals(avatar.getUploadedBy());
 	}
 

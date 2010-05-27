@@ -80,7 +80,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	/**
 	 * @see net.jforum.repository.UserRepository#getByUsername(String)
 	 */
-	public User getByUsername(String username){
+	public User getByUsername(String username) {
 		return (User)this.session().createCriteria(this.persistClass)
 			.add(Restrictions.eq("username", username))
 			.setComment("userDAO.getByUsername")
@@ -101,7 +101,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	 * @see UserRepository#findByUserName(String)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<User> findByUserName(String username){
+	public List<User> findByUserName(String username) {
 		return this.session().createCriteria(this.persistClass)
 			.add(Restrictions.ilike("username", username, MatchMode.ANYWHERE))
 			.addOrder(Order.asc("username"))
@@ -150,7 +150,7 @@ public class UserDAO extends HibernateGenericDAO<User> implements UserRepository
 	/**
 	 * @see net.jforum.repository.UserRepository#getLastRegisteredUser()
 	 */
-	public User getLastRegisteredUser(){
+	public User getLastRegisteredUser() {
 		return (User)this.session().createCriteria(this.persistClass)
 			.addOrder(Order.desc("registrationDate"))
 			.setMaxResults(1)

@@ -22,7 +22,7 @@ public class MessageFormatService {
 	/**
 	 * format the text
 	 */
-	public String format(String text,PostOptions options){
+	public String format(String text,PostOptions options) {
 		for (Formatter formatter : formatters) {
 			text = formatter.format(text, options);
 		}

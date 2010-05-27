@@ -128,11 +128,11 @@ public class AttachmentQuota {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj == this){
+		if (obj == this) {
 			return true;
 		}
 
-		if(!(obj instanceof AttachmentQuota)){
+		if (!(obj instanceof AttachmentQuota)) {
 			return false;
 		}
 

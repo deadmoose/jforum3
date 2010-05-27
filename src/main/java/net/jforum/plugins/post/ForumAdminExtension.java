@@ -49,7 +49,7 @@ public class ForumAdminExtension {
 	public void edit(@Parameter(key = "forumId") int forumId) {
 		boolean isEnabled = this.config.getBoolean(ConfigKeys.FORUM_TIME_LIMITED_ENABLE, false);
 
-		if(isEnabled){
+		if (isEnabled) {
 			Forum forum = forumRepository.get(forumId);
 			long time = this.repository.getLimitedTime(forum);
 			this.propertyBag.put("forumTimeLimitedEnable", true);
@@ -60,12 +60,12 @@ public class ForumAdminExtension {
 	@Extends(Actions.EDITSAVE)
 	public void editSave(@Parameter(key = "forum") Forum forum, @Parameter(key = "forumLimitedTime", create=true) long forumLimitedTime) {
 		boolean isEnabled = this.config.getBoolean(ConfigKeys.FORUM_TIME_LIMITED_ENABLE, false);
-		if(isEnabled){
+		if (isEnabled) {
 			RoleManager roleManager = this.sessionManager.getUserSession().getRoleManager();
 
  			if (roleManager.isAdministrator() || roleManager.isCategoryAllowed(forum.getCategory().getId())) {
 				ForumLimitedTime current = this.repository.getForumLimitedTime(forum);
-				if(current == null){//maybe time limited function enabled after forum created
+				if (current == null) { //maybe time limited function enabled after forum created
 					current = new ForumLimitedTime();
 					current.setForum(forum);
 				}
@@ -78,7 +78,7 @@ public class ForumAdminExtension {
 	@Extends(Actions.ADD)
 	public void add() {
 		boolean isEnabled = this.config.getBoolean(ConfigKeys.FORUM_TIME_LIMITED_ENABLE, false);
-		if(isEnabled){
+		if (isEnabled) {
 			this.propertyBag.put("fourmTimeLimitedEnable", true);
 			this.propertyBag.put("fourmLimitedTime", 0);
 		}
@@ -87,12 +87,12 @@ public class ForumAdminExtension {
 	@Extends(Actions.ADDSAVE)
 	public void addSave(@Parameter(key = "fourmLimitedTime",create=true) long fourmLimitedTime) {
 		boolean isEnabled = this.config.getBoolean(ConfigKeys.FORUM_TIME_LIMITED_ENABLE, false);
-		if(isEnabled){
+		if (isEnabled) {
 			RoleManager roleManager = this.sessionManager.getUserSession().getRoleManager();
 
 			Forum forum = (Forum) this.propertyBag.get("forum");
 			if (forum != null && (roleManager.isAdministrator() || roleManager.isCategoryAllowed(forum.getCategory().getId()))) {
-				if(fourmLimitedTime > 0){
+				if (fourmLimitedTime > 0) {
 					ForumLimitedTime current = new ForumLimitedTime();
 					current.setForum(forum);
 					current.setLimitedTime(fourmLimitedTime);
@@ -105,16 +105,16 @@ public class ForumAdminExtension {
 	@Extends("delete")
 	public void delete(@Parameter(key = "forumsId") int... forumsId) {
 		boolean isEnabled = this.config.getBoolean(ConfigKeys.FORUM_TIME_LIMITED_ENABLE, false);
-		if(isEnabled){
+		if (isEnabled) {
 			RoleManager roleManager = this.sessionManager.getUserSession().getRoleManager();
 
 			if (roleManager.isAdministrator()) {
-				for(int forumId : forumsId){
+				for (int forumId : forumsId) {
 					Forum forum = new Forum();
 					forum.setId(forumId);
 					ForumLimitedTime fourmLimitedTime =this.repository.getForumLimitedTime(forum);
 
-					if(fourmLimitedTime!=null) {
+					if (fourmLimitedTime!=null) {
 						this.repository.remove(fourmLimitedTime);
 					}
 				}

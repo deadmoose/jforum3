@@ -38,10 +38,11 @@ public class TopicExtension {
 
 	@Extends(Actions.ADDSAVE)
 	public void afterSave(@Parameter(key = "tags") String tagString) {
-		if(StringUtils.isNotEmpty(tagString)){
+		if (StringUtils.isNotEmpty(tagString)) {
 			Topic topic = (Topic)this.propertyBag.get("topic");
-			if(topic == null)
+			if (topic == null) {
 				return;
+			}
 
 			tagService.addTag(tagString,topic);
 		}

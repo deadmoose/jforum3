@@ -44,7 +44,7 @@ public class JForumConfig extends PropertiesConfiguration {
 			loadProps();
 
 			//in test environment, hibernateTask could be null
-			if(hibernateTask != null){
+			if (hibernateTask != null) {
 				hibernateTask.execute(new HibernateRunnable() {
 					public void run() {
 						try {
@@ -56,8 +56,7 @@ public class JForumConfig extends PropertiesConfiguration {
 					}
 				});
 			}
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			throw new ForumException(e);
 		}
 
@@ -146,8 +145,7 @@ public class JForumConfig extends PropertiesConfiguration {
 
 				this.urlPatterns.put(name, new UrlPattern(value));
 			}
-		}
-		catch (IOException e) {
+		} catch (IOException e) {
 			throw new ForumException(e);
 		}
 	}

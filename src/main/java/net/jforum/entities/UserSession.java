@@ -111,7 +111,7 @@ public class UserSession  {
 	}
 
 	public String getIp() {
-		if(new JForumConfig().getBoolean(ConfigKeys.BLOCK_IP)) {
+		if (new JForumConfig().getBoolean(ConfigKeys.BLOCK_IP)) {
 			return null;
 		}
 

@@ -66,7 +66,7 @@ public class ActionExtensionManager {
 
 		List<LogicMethod> extendedLogicMethods = this.getExtendedLogicMethod(componentName,preLogicMethodName);
 		DefaultLogicDefinition definition = null;
-		for(LogicMethod method : extendedLogicMethods){
+		for (LogicMethod method : extendedLogicMethods) {
 			definition = new DefaultLogicDefinition(method.getComponentType(), method);
 			definitions.add(definition);
 		}
@@ -75,7 +75,7 @@ public class ActionExtensionManager {
 	}
 
 	public void setExtensions(List<String> list) {
-		if(componentManager == null)
+		if (componentManager == null)
 			throw new NullPointerException("Need Component Manager");
 
 		Class<?> type;
@@ -95,14 +95,14 @@ public class ActionExtensionManager {
 
 	@SuppressWarnings("unchecked")
 	private void register(Class<?> type) {
-		/*if(!type.isAnnotationPresent(ActionExtension.class)){
+		/*if (!type.isAnnotationPresent(ActionExtension.class)) {
 			return null;
 		}*/
 		String thisComponentName = null;
 		BeanConstructor constructor = null;
 		if (type.isAnnotationPresent(Component.class)) {
 			thisComponentName = getComponentName(type);
-		}else{
+		} else {
 			try {
 				Clazz clazz = new Clazz(type);
 				constructor = clazz.findSingleConstructor();
@@ -117,14 +117,14 @@ public class ActionExtensionManager {
 		String preComponentName = getExtendedComponentName(type); // which compoent to extend
 		Map<String,Method> methods = findExtendsMethod(type);
 
-		for(String preLogicName:methods.keySet()){
-			try{
+		for (String preLogicName:methods.keySet()) {
+			try {
 				componentManager.getComponent(preComponentName, preLogicName);//validate component and logic
-			}catch(ComponentNotFoundException e){
+			} catch(ComponentNotFoundException e) {
 				//not found the component, return
 				logger.warn("Extend Invalid Component" + preComponentName);
 				return ;
-			}catch(LogicNotFoundException e){
+			} catch(LogicNotFoundException e) {
 				//can no find correct action to extend
 				logger.warn("Extend Invalid Logic Action" + preComponentName);
 				//remove from extend method
@@ -137,7 +137,7 @@ public class ActionExtensionManager {
 
 			//this extend component is annotated as component,
 			//Reuse the LogicMethod
-			if(thisComponentName!=null) {
+			if (thisComponentName != null) {
 				try {
 					ComponentType definedComponentType = componentManager.getComponent(thisComponentName, extendedMethodName);
 					LogicMethod extendedLogicMethod = definedComponentType.getLogic(extendedMethodName);
@@ -153,7 +153,7 @@ public class ActionExtensionManager {
 		}
 
 		// not annotated as component
-		if(thisComponentName == null ) {
+		if (thisComponentName == null ) {
 			ScopeType scope = ScopeType.REQUEST;
 
 			//construcotr is aviable, otherwise it will not reach here
@@ -171,7 +171,7 @@ public class ActionExtensionManager {
 			DefaultComponentType componentType = new DefaultComponentType(type, type.getName(),
 					scope, constructor, actions, null, null, null, null);
 
-			for(String preLogicName : actions.keySet()){
+			for (String preLogicName : actions.keySet()) {
 				DefaultLogicMethod extendedLogicMethod = actions.get(preLogicName);
 				extendedLogicMethod.setComponentType(componentType);
 				register(preComponentName, preLogicName,extendedLogicMethod);
@@ -181,10 +181,9 @@ public class ActionExtensionManager {
 
 	}
 
-	private Map<String, DefaultLogicMethod> createLogics(
-			Map<String, Method> methods) {
+	private Map<String, DefaultLogicMethod> createLogics(Map<String, Method> methods) {
 		Map<String, DefaultLogicMethod> actions = new HashMap<String, DefaultLogicMethod>();
-		for(String name : methods.keySet()){
+		for (String name : methods.keySet()) {
 			Method method = methods.get(name);
 			DefaultLogicMethod logicMethod = createLogicMethod(name,method);
 			actions.put(name, logicMethod);
@@ -197,16 +196,16 @@ public class ActionExtensionManager {
 		return new DefaultLogicMethod(null, name, method, null, parameters);
 	}
 
-	private Map<String,Method> findExtendsMethod(Class<?> type){
+	private Map<String,Method> findExtendsMethod(Class<?> type) {
 		Map<String,Method> methods = new HashMap<String,Method>();
 		for (Method method : type.getMethods()) {
 			if (isNotExtendLogicMethod(method)) {
 				continue;
 			}
 			Extends annotation = method.getAnnotation(Extends.class);
-			if(annotation.value().length==0){
+			if (annotation.value().length == 0) {
 				methods.put(method.getName(), method);
-			}else{
+			} else {
 				for (String name : annotation.value()) {
 					methods.put(name, method);
 				}
@@ -239,22 +238,22 @@ public class ActionExtensionManager {
 		return componentName;
 	}
 
-	private String getExtendedComponentName(Class<?> type){
+	private String getExtendedComponentName(Class<?> type) {
 		String componentName;
-		if(type.isAnnotationPresent(ActionExtension.class)){
+		if (type.isAnnotationPresent(ActionExtension.class)) {
 			ActionExtension ann = type.getAnnotation(ActionExtension.class);
 			if (!ann.value().equals("")) {
 				componentName = ann.value();
 			} else {
 				componentName = getAutoName(type);
 			}
-		}else{
+		} else {
 			componentName = type.getSimpleName();
 		}
 		return componentName;
 	}
 
-	private String getAutoName(Class<?> type){
+	private String getAutoName(Class<?> type) {
 		String name = StringUtil.removeEnding(type.getSimpleName(),
 				DefaultComponentManager.COMPONENT_TERMINATIONS);
 
@@ -265,7 +264,7 @@ public class ActionExtensionManager {
 		}
 	}
 
-	private void register(String component,String logicMethodName,LogicMethod method)  {
+	private void register(String component,String logicMethodName,LogicMethod method) {
 		List<LogicMethod> methods = this.getExtendedLogicMethod(component, logicMethodName);
 		methods.add(method);
 
@@ -281,14 +280,15 @@ public class ActionExtensionManager {
 		List<LogicMethod> methods;
 
 		ConcurrentMap<String, List<LogicMethod>>  _logicMethod=  this.extensions.get(preComponentName);
-		if(_logicMethod == null)
+		if (_logicMethod == null) {
 			return new ArrayList<LogicMethod>();
+		}
 
 		methods = _logicMethod.get(preLogicMethodName);
-		if(methods == null)
+		if (methods == null) {
 			methods = new ArrayList<LogicMethod>();
+		}
 
 		return methods;
 	}
-
 }

@@ -44,10 +44,10 @@ public class DefaultViewLocator implements ViewLocator {
 		//TODO allow view managers to be expanded by registering your own managers...
 		// this code should look go for each one as in the converter finder
 		*/
-		if(isXhr(req)){
+		if (isXhr(req)) {
 			String viewType = this.getViewType(req);
 			if ((SUPPORTEDXML.equals(viewType) || SUPPORTEDJSON.equals(viewType))) {
-				if(!method.getMetadata().isAnnotationPresent(Remotable.class)) {
+				if (!method.getMetadata().isAnnotationPresent(Remotable.class)) {
 					throw new LogicException("logic method is not @Remotable");
 				}
 				return new RemoteViewManager(defaultViewManager, RemoteView.valueOf(viewType.toUpperCase()));
@@ -63,7 +63,7 @@ public class DefaultViewLocator implements ViewLocator {
 	 * @param req
 	 * @return
 	 */
-	private boolean isXhr(VRaptorServletRequest req){
+	private boolean isXhr(VRaptorServletRequest req) {
 		return XHRHEADERVALUE.equals(req.getHeader(XREQUESTEADER));
 	}
 
@@ -80,25 +80,24 @@ public class DefaultViewLocator implements ViewLocator {
 	 * @param req
 	 * @return
 	 */
-	private String getViewType(VRaptorServletRequest req){
+	private String getViewType(VRaptorServletRequest req) {
 		Enumeration<?> accepts = req.getHeaders(ACCEPTREQUESTEADER);//IE6 will send two Accept header
 
 		StringBuilder acceptBuilder = new StringBuilder();
-		for(;accepts.hasMoreElements();){
+		while (accepts.hasMoreElements()) {
 			acceptBuilder.append(accepts.nextElement());
 			acceptBuilder.append(", ");
 		}
 
 		String accept = acceptBuilder.toString();
 
-		if(StringUtils.isEmpty(accept))
+		if (StringUtils.isEmpty(accept)) {
 			return null;
-		if(accept.indexOf("application/json")>-1){
+		} else if (accept.indexOf("application/json")>-1) {
 			return SUPPORTEDJSON;
-		}else if(accept.indexOf("application/xml")>-1){
+		} else if (accept.indexOf("application/xml")>-1) {
 			return SUPPORTEDXML;
 		}
 		return null;
-
 	}
 }

@@ -60,7 +60,7 @@ public class ExtensibleInterceptor implements Interceptor {
 		Introspector introspector = application.getIntrospector();
 		BeanProvider beanProvider = introspector.getBeanProvider();
 
-		if(isExtendedAnnotationPresent(logicRequest)){
+		if (isExtendedAnnotationPresent(logicRequest)) {
 			//redirect to index page
 			ViewService viewService = (ViewService)beanProvider.findAttribute(logicRequest, ViewService.class.getName());
 			viewService.redirectToAction(Domain.FORUMS, Actions.LIST);
@@ -77,13 +77,12 @@ public class ExtensibleInterceptor implements Interceptor {
 		LogicDefinition logicDefinition = logicRequest.getLogicDefinition();
 		List<LogicDefinition> extendedLogicDefinitions = manager.getLogicDefinition(logicDefinition);
 
-		for(LogicDefinition extendedLogicDefinition : extendedLogicDefinitions ){
+		for (LogicDefinition extendedLogicDefinition : extendedLogicDefinitions) {
 			this.execute(extendedLogicDefinition, logicRequest);
 		}
 	}
 
-	private void execute(LogicDefinition extendedLogicDefinition,LogicRequest logicRequest){
-
+	private void execute(LogicDefinition extendedLogicDefinition,LogicRequest logicRequest) {
 		ComponentType extendedComponentType = extendedLogicDefinition.getComponentType();
 		LogicMethod extendedLogicMethod     = extendedLogicDefinition.getLogicMethod();
 
@@ -107,7 +106,7 @@ public class ExtensibleInterceptor implements Interceptor {
 		}
 	}
 
-	private Object[]readParameter(LogicRequest logicRequest,LogicMethod logicMethod,Object componentInstance) throws SettingException{
+	private Object[]readParameter(LogicRequest logicRequest,LogicMethod logicMethod,Object componentInstance) throws SettingException {
 		WebApplication application = (WebApplication)logicRequest.getServletContext().getAttribute(WebApplication.class.getName());
 		Introspector introspector = application.getIntrospector();
 
@@ -134,8 +133,7 @@ public class ExtensibleInterceptor implements Interceptor {
 		return methodParamObjects;
 	}
 
-	private boolean isExtendedAnnotationPresent(LogicRequest logicRequest){
+	private boolean isExtendedAnnotationPresent(LogicRequest logicRequest) {
 		return logicRequest.getLogicDefinition().getLogicMethod().getMetadata().isAnnotationPresent(Extends.class);
 	}
-
 }

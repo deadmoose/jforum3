@@ -198,12 +198,11 @@ public class UserActions {
 
 		Avatar avatar = null;
 
-		if (avatarId != null){
+		if (avatarId != null) {
 			avatar = new Avatar();
 			avatar.setId(avatarId);
 			avatar.setAvatarType(AvatarType.AVATAR_GALLERY);
-		}
-		else if (image != null) {
+		} else if (image != null) {
 			avatar = new Avatar();
 			avatar.setAvatarType(AvatarType.AVATAR_UPLOAD);
 			this.avatarService.add(avatar, image);
@@ -213,8 +212,7 @@ public class UserActions {
 
 		if (rankingId == null) {
 			user.setRanking(null);
-		}
-		else {
+		} else {
 			Ranking ranking = new Ranking();
 			ranking.setId(rankingId);
 			user.setRanking(ranking);
@@ -234,9 +232,7 @@ public class UserActions {
 	 * Shows the page to create a new user
 	 */
 	@InterceptedBy(ExternalUserManagementInterceptor.class)
-	public void insert() {
-
-	}
+	public void insert() { }
 
 	/**
 	 * Adds a new user

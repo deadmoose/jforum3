@@ -59,7 +59,7 @@ public class ForumAdminTestCase {
 		context.checking(new Expectations() {{
 			one(config).getBoolean("forum.time.limited.enable", false); will(returnValue(true));
 
-			one(forumRepository).get(forumId); will(returnValue(new Forum(){{setId(1);}}));
+			one(forumRepository).get(forumId); will(returnValue(new Forum() {{setId(1);}}));
 			one(repository).getLimitedTime(with(any(Forum.class))); will(returnValue(0L));
 			one(propertyBag).put("forumTimeLimitedEnable", true);
 			one(propertyBag).put("forumLimitedTime", 0L);
@@ -126,7 +126,7 @@ public class ForumAdminTestCase {
 		final Forum forum = new Forum(23);
 
 		context.checking(new Expectations() {{
-			ForumLimitedTime forumLimitedTime = new ForumLimitedTime(){{setId(1);}};
+			ForumLimitedTime forumLimitedTime = new ForumLimitedTime() {{setId(1);}};
 
 			one(config).getBoolean("forum.time.limited.enable", false); will(returnValue(true));
 			one(roleManager).isAdministrator(); will(returnValue(true));

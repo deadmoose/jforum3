@@ -47,7 +47,7 @@ public class ChangePostRule implements AccessRule {
 			return true;
 		}
 
-		if(roleManager.getPostOnlyWithModeratorOnline() && !sessionManager.isModeratorOnline()) {
+		if (roleManager.getPostOnlyWithModeratorOnline() && !sessionManager.isModeratorOnline()) {
 			return false;
 		}
 

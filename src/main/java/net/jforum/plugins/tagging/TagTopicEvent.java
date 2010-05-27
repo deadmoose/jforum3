@@ -35,8 +35,9 @@ public class TagTopicEvent extends EmptyTopicEvent {
 	@Override
 	public void beforeDeleted(Topic topic) {
 		List<Tag> tags = repository.getTags(topic);
-		for(Tag tag : tags)
+		for (Tag tag : tags) {
 			repository.remove(tag);
+		}
 	}
 
 }

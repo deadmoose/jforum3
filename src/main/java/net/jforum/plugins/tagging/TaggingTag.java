@@ -33,11 +33,11 @@ public class TaggingTag extends JForumTag {
 	private I18n i18n;
 
 	public TaggingTag() {
-		if(tagService == null) {
+		if (tagService == null) {
 			this.tagService = this.getBean(TagService.class);
 		}
 
-		if(i18n ==null) {
+		if (i18n ==null) {
 			this.i18n = this.getBean(I18n.class);
 		}
 	}
@@ -52,15 +52,15 @@ public class TaggingTag extends JForumTag {
 
 	@Override
 	public void doTag() throws JspException, IOException {
-		if(topic == null) {
+		if (topic == null) {
 			return;
 		}
 
 		StringBuilder sb = new StringBuilder(50);
-		try{
+		try {
 			List<Tag> tags = this.tagService.getTag(topic);
 
-			if(tags.size()==0) {
+			if (tags.size()==0) {
 				return;
 			}
 
@@ -75,7 +75,7 @@ public class TaggingTag extends JForumTag {
 			  .append(i18n.getMessage("Tag.list.intro"))
 			  .append("</span><span class=\"tagging-list\">");
 
-			for(Tag tag : tags){
+			for (Tag tag : tags) {
 				String tagStr = tag.getName();
 				String tagUrl = java.net.URLEncoder.encode(tagStr,URLTag.URL_ENCODE);
 
@@ -86,7 +86,7 @@ public class TaggingTag extends JForumTag {
 				  .append(this.config().getString(ConfigKeys.SERVLET_EXTENSION))
 				  .append("\">")
 				  .append(tagStr);
-				if(showCount){
+				if (showCount) {
 					int count = this.tagService.count(tagStr);
 					sb.append("(")
 					  .append(count)
@@ -95,7 +95,7 @@ public class TaggingTag extends JForumTag {
 				sb.append("</a></b></span>");
 			}
 			sb.append("</span></div></div>");
-		}catch(Exception e){
+		} catch(Exception e) {
 			e.printStackTrace();
 			return ;
 		}

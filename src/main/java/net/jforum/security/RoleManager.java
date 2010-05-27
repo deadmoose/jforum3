@@ -241,7 +241,7 @@ public class RoleManager {
 
 	public boolean isCategoryModerated(List<Forum> forumsOfACategory) {
 		for (Forum forum : forumsOfACategory) {
-			if(this.roleExists(SecurityConstants.MODERATE_FORUM, forum.getId())) {
+			if (this.roleExists(SecurityConstants.MODERATE_FORUM, forum.getId())) {
 				return true;
 			}
 		}

@@ -30,7 +30,7 @@ public class TagServiceTestCase {
 	private TagService service = new TagService(repository,forumRepository);
 
 	@Test
-	public void addNullTagShouldIgnore(){
+	public void addNullTagShouldIgnore() {
 		Topic topic = new Topic();
 		context.checking(new Expectations() {{
 		}});
@@ -40,7 +40,7 @@ public class TagServiceTestCase {
 	}
 
 	@Test
-	public void addNullTopicShouldIgnore(){
+	public void addNullTopicShouldIgnore() {
 		context.checking(new Expectations() {{
 		}});
 
@@ -49,7 +49,7 @@ public class TagServiceTestCase {
 	}
 
 	@Test
-	public void addEmptyTagShouldIgnore(){
+	public void addEmptyTagShouldIgnore() {
 		Topic topic = new Topic();
 		context.checking(new Expectations() {{
 		}});
@@ -59,7 +59,7 @@ public class TagServiceTestCase {
 	}
 
 	@Test
-	public void addEmptySpaceTagShouldIgnore(){
+	public void addEmptySpaceTagShouldIgnore() {
 		Topic topic = new Topic();
 		context.checking(new Expectations() {{
 		}});

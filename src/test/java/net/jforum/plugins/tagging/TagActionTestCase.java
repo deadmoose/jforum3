@@ -50,7 +50,7 @@ public class TagActionTestCase {
 	private TagAction tagAction;
 
 	@Test
-	public void find(){
+	public void find() {
 		final String tag = "IT";
 		context.checking(new Expectations() {{
 			one(userSession).getRoleManager();
@@ -96,7 +96,7 @@ public class TagActionTestCase {
 	}
 
 	@Test
-	public void replySave(){
+	public void replySave() {
 		final String tagString ="tags,tags";
 		final Topic topic = new Topic();
 		context.checking(new Expectations() {{
@@ -109,7 +109,7 @@ public class TagActionTestCase {
 	}
 
 	@Test
-	public void list(){
+	public void list() {
 		context.checking(new Expectations() {{
 			one(userSession).getRoleManager();
 			one(tagService).getHotTags(with(is(200)), with(is(7)), with(any(RoleManager.class))); will(returnValue(new LinkedHashMap<String,Integer>()));

@@ -50,13 +50,11 @@ public class GroupDAO extends HibernateGenericDAO<Group> implements GroupReposit
 	@Override
 	public void remove(Group group) {
 		List<User> users = group.getUsers();
-		for(User user : users){
+		for (User user : users) {
 			List<Group> groups = user.getGroups();
 			groups.remove(group);
 			this.session().save(user);
 		}
 		super.remove(group);
 	}
-
-
 }

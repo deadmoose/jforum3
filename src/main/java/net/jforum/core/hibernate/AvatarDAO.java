@@ -56,7 +56,7 @@ public class AvatarDAO extends HibernateGenericDAO<Avatar> implements AvatarRepo
 	}
 
 	@SuppressWarnings("unchecked")
-	private List<Avatar> getAllAvatars(AvatarType type){
+	private List<Avatar> getAllAvatars(AvatarType type) {
 		return this.session().createCriteria(this.persistClass)
 			.add(Restrictions.eq("avatarType", type))
 			.setComment("AvatarDAO.getAvatar." + type)
@@ -71,7 +71,7 @@ public class AvatarDAO extends HibernateGenericDAO<Avatar> implements AvatarRepo
 		Set<User> users = avatar.getUsers();
 
 		if (users != null) {
-			for(User user : users){
+			for (User user : users) {
 				user.setAvatar(null);
 				this.session().save(user);
 			}

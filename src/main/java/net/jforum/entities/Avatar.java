@@ -65,7 +65,7 @@ public class Avatar implements Serializable {
 		this.users = users;
 	}
 
-	public User getUploadedBy(){
+	public User getUploadedBy() {
 		if (avatarType == AvatarType.AVATAR_UPLOAD && users != null && users.size( ) == 1) {
 			return users.iterator().next();
 		}

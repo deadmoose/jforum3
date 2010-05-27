@@ -84,8 +84,7 @@ public class JForumServlet extends VRaptorServlet {
 			this.operationChain.callAllOperations();
 
 			super.service(request, response);
-		}
-		finally {
+		} finally {
 			RequestContextHolder.resetRequestAttributes();
 			attributes.requestCompleted();
 		}
@@ -101,11 +100,11 @@ public class JForumServlet extends VRaptorServlet {
 		this.getServletContext().setAttribute("webApplication", app);
 	}
 
-	private void setupExtentionManager(ApplicationContext beanFactory){
+	private void setupExtentionManager(ApplicationContext beanFactory) {
 		WebApplication app = (WebApplication)this.getServletContext().getAttribute("webApplication");
 
 		ActionExtensionManager extensionManager = (ActionExtensionManager) beanFactory
-			.getBean(ActionExtensionManager.class.getName(), new Object[] {app.getComponentManager() });
+			.getBean(ActionExtensionManager.class.getName(), new Object[] { app.getComponentManager() });
 
 		this.getServletContext().setAttribute(ActionExtensionManager.class.getName(), extensionManager);
 	}

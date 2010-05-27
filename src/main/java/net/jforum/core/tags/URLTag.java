@@ -39,15 +39,17 @@ public class URLTag extends JForumTag {
 		StringBuilder urlBuilder = new StringBuilder(128)
 						.append(this.request().getContextPath());
 
-		if(encode){
-			if(this.address == null)
+		if (encode) {
+			if (this.address == null) {
 				this.address="";
-			String[] addresses = this.address.split("/");
-			for(String _address : addresses){
-				if(StringUtils.isNotEmpty(_address))
-					urlBuilder.append("/").append(URLEncoder.encode(_address, URL_ENCODE));
 			}
-		}else{
+			String[] addresses = this.address.split("/");
+			for (String _address : addresses) {
+				if (StringUtils.isNotEmpty(_address)) {
+					urlBuilder.append("/").append(URLEncoder.encode(_address, URL_ENCODE));
+				}
+			}
+		} else {
 			urlBuilder.append(this.address);
 		}
 
@@ -68,5 +70,4 @@ public class URLTag extends JForumTag {
 	public void setEncode(boolean encode) {
 		this.encode = encode;
 	}
-
 }

@@ -54,7 +54,7 @@ public class ConfigActions {
 		this.viewService = viewService;
 	}
 
-	public void list(){
+	public void list() {
 		this.propertyBag.put("locales", this.loadLocaleNames());
 		this.propertyBag.put("config", this.config);
 	}
@@ -69,8 +69,7 @@ public class ConfigActions {
 
 		try {
 			locales.load(this.getClass().getResourceAsStream("/jforumConfig/languages/locales.properties"));
-		}
-		catch (IOException e) {
+		} catch (IOException e) {
 			throw new ForumException(e);
 		}
 

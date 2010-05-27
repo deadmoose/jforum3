@@ -48,7 +48,7 @@ public class TagDAOTestCase extends AbstractDAOTestCase<Tag> {
 
 	@Test
 	@SuppressWarnings("deprecation")
-	public void getAll(){
+	public void getAll() {
 		new JDBCLoader(sessionFactory.getCurrentSession().connection())
 		.run("/tagdao/dump.sql");
 
@@ -63,7 +63,7 @@ public class TagDAOTestCase extends AbstractDAOTestCase<Tag> {
 
 	@Test
 	@SuppressWarnings("deprecation")
-	public void getHotTags(){
+	public void getHotTags() {
 		new JDBCLoader(sessionFactory.getCurrentSession().connection())
 		.run("/tagdao/dump.sql");
 		this.commit();
@@ -94,7 +94,7 @@ public class TagDAOTestCase extends AbstractDAOTestCase<Tag> {
 
 	@SuppressWarnings("deprecation")
 	@Test
-	public void removeTagByName(){
+	public void removeTagByName() {
 		new JDBCLoader(sessionFactory.getCurrentSession().connection())
 		.run("/tagdao/dump.sql");
 		this.commit();
@@ -113,7 +113,7 @@ public class TagDAOTestCase extends AbstractDAOTestCase<Tag> {
 
 	@Test
 	@SuppressWarnings("deprecation")
-	public void updateTagName(){
+	public void updateTagName() {
 		new JDBCLoader(sessionFactory.getCurrentSession().connection())
 		.run("/tagdao/dump.sql");
 		this.commit();
@@ -133,7 +133,7 @@ public class TagDAOTestCase extends AbstractDAOTestCase<Tag> {
 
 	@Test
 	@SuppressWarnings("deprecation")
-	public void countTag(){
+	public void countTag() {
 		new JDBCLoader(sessionFactory.getCurrentSession().connection())
 		.run("/tagdao/dump.sql");
 		this.commit();
@@ -148,7 +148,7 @@ public class TagDAOTestCase extends AbstractDAOTestCase<Tag> {
 
 	@Test
 	@SuppressWarnings({ "deprecation", "serial" })
-	public void getTopicOfTagName(){
+	public void getTopicOfTagName() {
 		new JDBCLoader(sessionFactory.getCurrentSession().connection())
 		.run("/tagdao/dump.sql");
 		this.commit();

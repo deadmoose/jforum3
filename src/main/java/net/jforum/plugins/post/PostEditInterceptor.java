@@ -75,7 +75,7 @@ public class PostEditInterceptor implements Interceptor {
 						return;
 					}
 				}
-				if(roleManager.getPostOnlyWithModeratorOnline() && !sessionManager.isModeratorOnline()) {
+				if (roleManager.getPostOnlyWithModeratorOnline() && !sessionManager.isModeratorOnline()) {
 					this.viewService.renderView("canOnlyPostWithModeratorOnline", "moderatorOnline");
 					return;
 				}

@@ -41,7 +41,7 @@ public class TaggingCloudTag extends ImportFileTag {
 		if (tagService == null) {
 			this.tagService = this.getBean(TagService.class);
 		}
-		if(sessionManager == null ){
+		if (sessionManager == null) {
 			this.sessionManager = this.getBean(SessionManager.class);
 		}
 	}
@@ -65,26 +65,28 @@ public class TaggingCloudTag extends ImportFileTag {
 	 */
 	@Override
 	public void doTag() throws JspException, IOException {
-		if(tagCount<1)
+		if (tagCount<1) {
 			tagCount = DEFAULT_TAGCOUNT;
+		}
 
 		UserSession userSession = this.sessionManager.getUserSession();
 		RoleManager roleManager = userSession.getRoleManager();
 
 		Map<String,Integer> hotTagsWithGroupIndex = null;
 		//forum index page
-		if(forum == null){
+		if (forum == null) {
 			hotTagsWithGroupIndex = this.tagService.getHotTags(tagCount,7,roleManager);
-		}else{//topic list page
+		} else { //topic list page
 			hotTagsWithGroupIndex = this.tagService.getHotTags(forum, tagCount, 7);
 		}
 
-		if(hotTagsWithGroupIndex.size()>0){
+		if (hotTagsWithGroupIndex.size() > 0) {
 			Map<String,String> tagClass = this.getTagWithClass(hotTagsWithGroupIndex);
 			this.request().setAttribute("tags",	tagClass);
 
-			if(this.url == null)
+			if (this.url == null) {
 				this.setUrl(DEFAULT_URL);
+			}
 
 			//process the import file.
 			super.doTag();
@@ -92,9 +94,9 @@ public class TaggingCloudTag extends ImportFileTag {
 
 	}
 
-	private Map<String,String> getTagWithClass(Map<String,Integer> hotTagsWithGroupIndex){
+	private Map<String,String> getTagWithClass(Map<String,Integer> hotTagsWithGroupIndex) {
 		Map<String,String> tagClass = new LinkedHashMap<String,String>();
-		for(Map.Entry<String, Integer> entry : hotTagsWithGroupIndex.entrySet()){
+		for (Map.Entry<String, Integer> entry : hotTagsWithGroupIndex.entrySet()) {
 			String tagName = entry.getKey();
 			Integer groupIndex = entry.getValue();
 			String cssClass = this.getClass(groupIndex);
@@ -105,8 +107,8 @@ public class TaggingCloudTag extends ImportFileTag {
 		return tagClass;
 	}
 
-	private String getClass(int groupIndex){
-		switch(groupIndex){
+	private String getClass(int groupIndex) {
+		switch (groupIndex) {
 			case 6:
 				return "largest";
 			case 5:

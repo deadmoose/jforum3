@@ -68,8 +68,9 @@ public abstract class ImportFileTag extends JForumTag {
 
 		String jspPath = servletContext.getRealPath(jsp);
 		File jspFile = new File(jspPath);
-		if(!jspFile.exists())
+		if (!jspFile.exists()) {
 			return ;
+		}
 
 		respose.flushBuffer();
 		RequestDispatcher rd = this.pageContext().getRequest().getRequestDispatcher(jsp);
@@ -90,7 +91,7 @@ public abstract class ImportFileTag extends JForumTag {
 		}
 	}
 
-	private String getFile(String item){
+	private String getFile(String item) {
 		return new StringBuilder(128)
 		.append('/').append(this.config().getValue(ConfigKeys.TEMPLATE_DIRECTORY)).append('/')
 		.append(this.config().getValue(ConfigKeys.TEMPLATE_NAME))

@@ -127,7 +127,7 @@ public class ViewService {
 	 * get Request Context Path
 	 * @return
 	 */
-	public String getContextPath(){
+	public String getContextPath() {
 		return this.request.getContextPath();
 	}
 

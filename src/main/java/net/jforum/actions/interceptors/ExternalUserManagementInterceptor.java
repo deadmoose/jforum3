@@ -45,7 +45,7 @@ public class ExternalUserManagementInterceptor implements Interceptor {
 		boolean isExternalUserManagement = this.config.getBoolean(
 				ConfigKeys.EXTERNAL_USER_MANAGEMENT, false);
 
-		if(isExternalUserManagement){
+		if (isExternalUserManagement) {
 			//forward
 			LogicRequest logicRequest = flow.getLogicRequest();
 			HttpServletRequest request = logicRequest.getRequest();
