@@ -20,15 +20,15 @@ import net.jforum.repository.Repository;
 public interface ForumLimitedTimeRepository extends Repository<ForumLimitedTime> {
 
 	/**
-	 * get the limited time for gaven forum
-	 * if not setted or no limited will return 0
+	 * get the limited time for given forum
+	 * if not set or no limited will return 0
 	 * @param forum
 	 * @return
 	 */
 	long getLimitedTime(Forum forum);
 
 	/**
-	 * get the FourmLimitedTime for gaven forum
+	 * get the ForumLimitedTime for given forum
 	 * @param forum
 	 * @return
 	 */
@@ -38,5 +38,5 @@ public interface ForumLimitedTimeRepository extends Repository<ForumLimitedTime>
 	 * save or Updates the information of an existing object
 	 * @param forumLimitedTime
 	 */
-	public void saveOrUpdate(ForumLimitedTime fourmLimitedTime);
+	public void saveOrUpdate(ForumLimitedTime forumLimitedTime);
 }
