@@ -10,7 +10,6 @@
  */
 package net.jforum.util;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Enumeration;
@@ -137,8 +136,6 @@ public class JForumConfig extends PropertiesConfiguration {
 	 * Load the urlPatterns
 	 */
 	private void loadUrlPatterns() {
-		FileInputStream fis = null;
-
 		try {
 			Properties p = new Properties();
 			p.load(this.getClass().getResourceAsStream("/jforumConfig/urlPattern.properties"));
@@ -152,11 +149,6 @@ public class JForumConfig extends PropertiesConfiguration {
 		}
 		catch (IOException e) {
 			throw new ForumException(e);
-		}
-		finally {
-			if (fis != null) {
-				try { fis.close(); } catch (Exception e) {}
-			}
 		}
 	}
 }

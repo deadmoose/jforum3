@@ -50,7 +50,7 @@ public class ActionExtensionManager {
 
 	private ComponentManager componentManager;
 
-	private final ParameterInfoProvider paramInfo = new ExtendedParameterInfoProvider();;
+	private final ParameterInfoProvider paramInfo = new ExtendedParameterInfoProvider();
 
 	private final ConcurrentMap<String, ConcurrentMap<String, List<LogicMethod>>> extensions =
 		new ConcurrentHashMap<String, ConcurrentMap<String, List<LogicMethod>>>();
@@ -227,7 +227,7 @@ public class ActionExtensionManager {
 		String componentName;
 
 		if (type.isAnnotationPresent(Component.class)) {
-			Component ann = ((Component) type.getAnnotation(Component.class));
+			Component ann = (type.getAnnotation(Component.class));
 			if (!ann.value().equals("")) {
 				componentName = ann.value();
 			} else {
@@ -242,7 +242,7 @@ public class ActionExtensionManager {
 	private String getExtendedComponentName(Class<?> type){
 		String componentName;
 		if(type.isAnnotationPresent(ActionExtension.class)){
-			ActionExtension ann = ((ActionExtension)type.getAnnotation(ActionExtension.class));
+			ActionExtension ann = type.getAnnotation(ActionExtension.class);
 			if (!ann.value().equals("")) {
 				componentName = ann.value();
 			} else {

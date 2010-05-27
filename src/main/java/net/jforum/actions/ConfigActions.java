@@ -10,7 +10,6 @@
  */
 package net.jforum.actions;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -68,18 +67,11 @@ public class ConfigActions {
 	private List<String> loadLocaleNames() {
 		Properties locales = new Properties();
 
-		FileInputStream fis = null;
-
 		try {
 			locales.load(this.getClass().getResourceAsStream("/jforumConfig/languages/locales.properties"));
 		}
 		catch (IOException e) {
 			throw new ForumException(e);
-		}
-		finally {
-			if (fis != null) {
-				try { fis.close(); } catch (Exception e) {}
-			}
 		}
 
 		List<String> localesList = new ArrayList<String>();
